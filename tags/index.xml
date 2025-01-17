@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on XploR Eos IDE</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on XploR Eos IDE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Jan 2025 15:09:14 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debug</title>
+      <link>http://localhost:1313/tags/debug/</link>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/debug/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docs</title>
+      <link>http://localhost:1313/tags/docs/</link>
+      <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/docs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sample</title>
+      <link>http://localhost:1313/tags/sample/</link>
+      <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sample/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/tags/test/</link>
+      <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bare-Metal</title>
+      <link>http://localhost:1313/tags/bare-metal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/bare-metal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bitfile</title>
+      <link>http://localhost:1313/tags/bitfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/bitfile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Electron</title>
+      <link>http://localhost:1313/tags/electron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/electron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Freertos</title>
+      <link>http://localhost:1313/tags/freertos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/freertos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardware</title>
+      <link>http://localhost:1313/tags/hardware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hardware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Installation</title>
+      <link>http://localhost:1313/tags/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/installation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Launch Configuration</title>
+      <link>http://localhost:1313/tags/launch-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/launch-configuration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QEMU</title>
+      <link>http://localhost:1313/tags/qemu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/qemu/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

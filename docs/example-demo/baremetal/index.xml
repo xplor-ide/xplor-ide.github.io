@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baremetal Example on XploR Eos IDE</title>
+    <link>http://localhost:1313/docs/example-demo/baremetal/</link>
+    <description>Recent content in Baremetal Example on XploR Eos IDE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/docs/example-demo/baremetal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNU C/C&#43;&#43; Helloworld</title>
+      <link>http://localhost:1313/docs/example-demo/baremetal/gnu-c-cpp-helloworld/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/example-demo/baremetal/gnu-c-cpp-helloworld/</guid>
+      <description>&lt;p&gt;This chapter covers the basics of C/C++ embedded projects including creating, building, running, and debugging baremetal applications. The project referred to in this chapter is called &amp;ldquo;Hello World.&amp;rdquo; This application prints &amp;ldquo;Hello World&amp;rdquo; text and runs a simple for-loop as a simple demonstration. The application can also be built and run on QEMU emulator.&lt;/p&gt;&#xA;&lt;h2 id=&#34;components-prerequisites&#34;&gt;Components Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#components-prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;baremetal-virt-qemu-helloworld-example&lt;/strong&gt;: Hello World C Baremetal Project for running on QEMU&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;baremetal-virt-qemu-helloworld-cpp-example&lt;/strong&gt;: Hello World C++ Baremetal Project for running on QEMU&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;xplor-studio-baremetal-debug-plugin&lt;/strong&gt;: ELF XploR Studio Plugin using for creating baremetal examples&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;rv-xplor-elf-linux64/rv-xplor-elf-win64&lt;/strong&gt;: XploR Embedded Toolchain for RISC-V (supported both 32 and 64-bit)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;rv-qemu-linux64/rv-qemu-win64&lt;/strong&gt;: QEMU for running and debugging RISC-V applications (Baremetal, Embedded, Embedded Linux)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;To build, run and debug GNU Helloworld applications, please make sure that all above components are installed. Please refer to &lt;a href=&#34;http://localhost:1313/docs/project-n-build/5.1_managing_projects/#5121-install-a-template&#34;&gt;5.1.2.1 Install a Template&lt;/a&gt; for more information about installing component.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LLVM Helloworld</title>
+      <link>http://localhost:1313/docs/example-demo/baremetal/llvm-helloworld/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/example-demo/baremetal/llvm-helloworld/</guid>
+      <description>&lt;p&gt;This chapter covers the basics of C embedded projects including creating, building, running, and debugging baremetal applications. The project referred to in this chapter is called &amp;ldquo;Hello World.&amp;rdquo; This application prints &amp;ldquo;Hello World&amp;rdquo; text and runs a simple for-loop as a simple demonstration. The application can also be built and run on QEMU emulator.&lt;/p&gt;&#xA;&lt;h2 id=&#34;components-prerequisites&#34;&gt;Components Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#components-prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;baremetal-virt-qemu-helloworld-llvm-example&lt;/strong&gt;: Hello World Baremetal (LLVM) Project for running on QEMU&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;xplor-studio-baremetal-debug-plugin&lt;/strong&gt;: ELF XploR Studio Plugin using for creating baremetal examples&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;rv-xplor-clang-linux64/rv-xplor-clang-win64&lt;/strong&gt;: XploR Embedded LLVM toolchain for RISC-V (support both 32 and 64-bit)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;rv-qemu-linux64/rv-qemu-win64&lt;/strong&gt;: QEMU for running and debugging RISC-V applications (Baremetal, Embedded, Embedded Linux)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;To build, run and debug LLVM Helloworld applications, please make sure that all above components are installed. Please refer to &lt;a href=&#34;http://localhost:1313/docs/project-n-build/5.1_managing_projects/#5121-install-a-template&#34;&gt;5.1.2.1 Install a Template&lt;/a&gt; for more information about installing component.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

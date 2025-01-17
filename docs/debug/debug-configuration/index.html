@@ -1,0 +1,636 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Debug Configuration | XploR Eos IDE</title>
+<meta name="description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+<meta property="og:url" content="http://localhost:1313/docs/debug/debug-configuration/">
+  <meta property="og:site_name" content="XploR Eos IDE">
+  <meta property="og:title" content="Debug Configuration">
+  <meta property="og:description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2024-10-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-17T15:08:41+07:00">
+    <meta property="article:tag" content="Debug">
+
+  <meta itemprop="name" content="Debug Configuration">
+  <meta itemprop="description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+  <meta itemprop="datePublished" content="2024-10-14T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-01-17T15:08:41+07:00">
+  <meta itemprop="wordCount" content="1424">
+  <meta itemprop="keywords" content="Debug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Debug Configuration">
+  <meta name="twitter:description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="9.03cm" height="9.03cm" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256"><defs><style>.cls-1{fill:url(#linear-gradient-4);filter:url(#drop-shadow-4)}.cls-2{fill:url(#linear-gradient-3);filter:url(#drop-shadow-3)}.cls-3{fill:url(#linear-gradient);filter:url(#drop-shadow-1)}.cls-4{fill:url(#linear-gradient-2);filter:url(#drop-shadow-2)}</style><linearGradient id="linear-gradient" x1="160.27" y1="185.15" x2="245.71" y2="185.15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8c52ff"/><stop offset=".24" stop-color="#a853d5"/><stop offset="1" stop-color="#ff5757"/></linearGradient><filter id="drop-shadow-1" x="147.99" y="126.04" width="115.68" height="123.84" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-2" x1="100.72" y1="124.74" x2="228.62" y2="124.74" xlink:href="#linear-gradient"/><filter id="drop-shadow-2" x="88.47" y="11.8" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-2" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-2" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-3" x1="10.29" y1="70.85" x2="95.73" y2="70.85" xlink:href="#linear-gradient"/><filter id="drop-shadow-3" x="-2.01" y="11.8" width="115.68" height="123.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-3" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-3" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-4" x1="27.38" y1="131.26" x2="155.28" y2="131.26" xlink:href="#linear-gradient"/><filter id="drop-shadow-4" x="15.03" y="18.28" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-4" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-4" operator="in"/><feComposite in="SourceGraphic"/></filter></defs><path class="cls-3" d="M167.42 138.44c21.73 16.26 63.84 47.73 65.11 48.68 33.21 24.82-4.6 41.4-23.01 44.38-8.43 1.38-18.52-1.28-29.08-6.17-21.46-23.92-25.79-53.73-13.03-86.89z"/><path class="cls-4" d="M157.44 45.54c29.15-23.12 60.59-31.36 70.45-5.1 7.97 21.21-51.39 74.35-60.47 98-12.76 33.16-8.43 62.98 13.03 86.89-23.04-10.68-48.22-32.1-62.91-45.49-39.63-36.3-2.24-100.87 39.9-134.3z"/><path class="cls-2" d="M88.58 117.56C66.85 101.3 24.74 69.83 23.47 68.88c-33.21-24.82 4.6-41.4 23.01-44.38 8.43-1.38 18.52 1.28 29.08 6.17 21.46 23.92 25.79 53.73 13.03 86.89z"/><path class="cls-1" d="M98.56 210.46c-29.15 23.12-60.59 31.36-70.45 5.1-7.97-21.21 51.39-74.35 60.47-98 12.76-33.16 8.43-62.98-13.03-86.89 23.04 10.68 48.22 32.1 62.91 45.49 39.63 36.3 2.24 100.87-39.9 134.3z"/></svg></span><span class="navbar-brand__name">XploR Eos IDE</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsoverview-li">
+  <input type="checkbox" id="m-docsoverview-check"/>
+  <label for="m-docsoverview-check"><a href="/docs/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewinstallation-li">
+  <input type="checkbox" id="m-docsoverviewinstallation-check"/>
+  <label for="m-docsoverviewinstallation-check"><a href="/docs/overview/installation/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewinstallation"><span class="">Installation</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewsystem-requirement-li">
+  <input type="checkbox" id="m-docsoverviewsystem-requirement-check"/>
+  <label for="m-docsoverviewsystem-requirement-check"><a href="/docs/overview/system-requirement/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewsystem-requirement"><span class="">System Requirements</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <input type="checkbox" id="m-docsgetting-started-check"/>
+  <label for="m-docsgetting-started-check"><a href="/docs/getting-started/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting started</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-freertos-li">
+  <input type="checkbox" id="m-docsgetting-startedhelloworld-freertos-check"/>
+  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="">Creating application with FreeRTOS</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgeneral-ide-li">
+  <input type="checkbox" id="m-docsgeneral-ide-check"/>
+  <label for="m-docsgeneral-ide-check"><a href="/docs/general-ide/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsgeneral-ide"><span class="">General IDE</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsproject-n-build-li">
+  <input type="checkbox" id="m-docsproject-n-build-check"/>
+  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Build and Quick Debug Projects</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build51_managing_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build51_managing_projects-check"/>
+  <label for="m-docsproject-n-build51_managing_projects-check"><a href="/docs/project-n-build/5.1_managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build51_managing_projects"><span class="">Managing Projects</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build52_building_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build52_building_projects-check"/>
+  <label for="m-docsproject-n-build52_building_projects-check"><a href="/docs/project-n-build/5.2_building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build52_building_projects"><span class="">Building Projects</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build53_debug_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build53_debug_projects-check"/>
+  <label for="m-docsproject-n-build53_debug_projects-check"><a href="/docs/project-n-build/5.3_debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build53_debug_projects"><span class="">Debug Projects</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdebug-li">
+  <input type="checkbox" id="m-docsdebug-check" checked/>
+  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug Project</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdebugdebug-configuration-li">
+  <input type="checkbox" id="m-docsdebugdebug-configuration-check" checked/>
+  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="td-sidebar-nav-active-item">Debug Configuration</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-application-li">
+  <input type="checkbox" id="m-docsdebugdebug-application-check"/>
+  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="">Debug Application</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugadvanced-debug-li">
+  <input type="checkbox" id="m-docsdebugadvanced-debug-check"/>
+  <label for="m-docsdebugadvanced-debug-check"><a href="/docs/debug/advanced-debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugadvanced-debug"><span class="">Advanced Debug</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demo-li">
+  <input type="checkbox" id="m-docsexample-demo-check"/>
+  <label for="m-docsexample-demo-check"><a href="/docs/example-demo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demo"><span class="">Example Demo</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demobaremetal-li">
+  <input type="checkbox" id="m-docsexample-demobaremetal-check"/>
+  <label for="m-docsexample-demobaremetal-check"><a href="/docs/example-demo/baremetal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demobaremetal"><span class="">Baremetal Example</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"><a href="/docs/example-demo/baremetal/gnu-c-cpp-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld"><span class="">GNU C/C&#43;&#43; Helloworld</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalllvm-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalllvm-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalllvm-helloworld-check"><a href="/docs/example-demo/baremetal/llvm-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalllvm-helloworld"><span class="">LLVM Helloworld</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-feature-li">
+  <input type="checkbox" id="m-docsremote-feature-check"/>
+  <label for="m-docsremote-feature-check"><a href="/docs/remote-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsremote-feature"><span class="">Remote Feature</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfaq-li">
+  <input type="checkbox" id="m-docsfaq-check"/>
+  <label for="m-docsfaq-check"><a href="/docs/faq/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfaq"><span class="">Frequently Asked Questions</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tag Cloud</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bare-metal/" data-taxonomy-term="bare-metal"><span class="taxonomy-label">Bare-Metal</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bitfile/" data-taxonomy-term="bitfile"><span class="taxonomy-label">Bitfile</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/docs/" data-taxonomy-term="docs"><span class="taxonomy-label">Docs</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/electron/" data-taxonomy-term="electron"><span class="taxonomy-label">Electron</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/freertos/" data-taxonomy-term="freertos"><span class="taxonomy-label">Freertos</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/hardware/" data-taxonomy-term="hardware"><span class="taxonomy-label">Hardware</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/installation/" data-taxonomy-term="installation"><span class="taxonomy-label">Installation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/launch-configuration/" data-taxonomy-term="launch-configuration"><span class="taxonomy-label">Launch Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/linux/" data-taxonomy-term="linux"><span class="taxonomy-label">Linux</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/qemu/" data-taxonomy-term="qemu"><span class="taxonomy-label">QEMU</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/sample/" data-taxonomy-term="sample"><span class="taxonomy-label">Sample</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/test/" data-taxonomy-term="test"><span class="taxonomy-label">Test</span><span class="taxonomy-count">9</span></a></li>
+        </ul>
+    </div>
+  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/examples/" data-taxonomy-term="examples"><span class="taxonomy-label">Examples</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/placeholders/" data-taxonomy-term="placeholders"><span class="taxonomy-label">Placeholders</span><span class="taxonomy-count">6</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/debug/">Debug Project</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Debug Configuration</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Debug Configuration</h1>
+	
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	<p>A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names <code>launch.json</code> within <code>.theia</code> folder in your workspace.</p>
+<p><img src="/images/debug/debug-1.png" alt=""></p>
+<p>You can easily access the <code>launch.json</code> file by clicking the <strong>Open launch.json</strong> button in the Debug View.</p>
+<p><img src="/images/debug/debug-20.png" alt=""></p>
+<p>There are many <code>User/Workspace Settings</code> to control things globally. You can find these in the <a href="https://code.visualstudio.com/docs/editor/debugging#_launch-configurations">VS Code Launch configurations</a>. <code>launch.json</code> can override some of those settings. There is a lot of functionality that is available via <code>Settings</code> and some may be useful in a team environment and/or can be used across all cortex-debug sessions</p>
+<p>The following attributes (properties) can be used in your <code>launch.json</code> to control various aspects of debugging. Also <code>IntelliSense</code> is an invaluable aid while editing <code>launch.json</code>. With <code>IntelliSense</code>, you can hover over an attribute to get more information and/or help you find attributes (just start typing a double-quote, use Tab key) and provide defaults/options.</p>
+<p>If the type is marked as <code>{...}</code> it means that it is a complex item can have multiple types. Possibly consult our Wiki</p>
+<table>
+  <thead>
+      <tr>
+          <th>Attribute</th>
+          <th>Type</th>
+          <th>Launch/ Attach</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>armToolchainPath</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>This setting can be used to override the armToolchainPath user setting for a particular launch configuration. This should be the path where arm-none-eabi-gdb, arm-none-eabi-objdump and arm-none-eabi-nm are located.</td>
+      </tr>
+      <tr>
+          <td>boardId</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>PyOCD Board Identifier. Needed if multiple compatible boards are connected.</td>
+      </tr>
+      <tr>
+          <td>breakAfterReset</td>
+          <td>boolean</td>
+          <td>Both</td>
+          <td>Applies to Restart/Reset/Launch, halt debugger after a reset. Ignored if <code>runToEntryPoint</code> is used.</td>
+      </tr>
+      <tr>
+          <td>configFiles</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>OpenOCD GDB Server configuration file(s) to use when debugging (OpenOCD -f option)</td>
+      </tr>
+      <tr>
+          <td>cpu</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>CPU Type Selection - used for QEMU server type</td>
+      </tr>
+      <tr>
+          <td>cwd</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>Directory to run commands from</td>
+      </tr>
+      <tr>
+          <td>debuggerArgs</td>
+          <td>array</td>
+          <td>Both</td>
+          <td>Additional arguments to pass to GDB command line</td>
+      </tr>
+      <tr>
+          <td>device</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>Target Device Identifier</td>
+      </tr>
+      <tr>
+          <td>executable</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>Path of executable for symbols and program information. See also <code>loadFiles</code>, <code>symbolFiles</code></td>
+      </tr>
+      <tr>
+          <td>gdbPath</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>This setting can be used to override the GDB path user/workspace setting for a particular launch configuration. This should be the full pathname to the executable (or name of the executable if it is in your PATH). Note that other toolchain executables with the configured prefix must still be available.</td>
+      </tr>
+      <tr>
+          <td>gdbTarget</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>For externally (servertype = &ldquo;external&rdquo;) controlled GDB Servers you must specify the GDB target to connect to. This can either be a &ldquo;hostname:port&rdquo; combination or path to a serial port</td>
+      </tr>
+      <tr>
+          <td>liveWatch</td>
+          <td>object</td>
+          <td>Both</td>
+          <td>An object with parameters for Live Watch</td>
+      </tr>
+      <tr>
+          <td>liveWatch<br>.enabled</td>
+          <td>boolean</td>
+          <td>Both</td>
+          <td>Enable/Disable Live Watch. Only applies to OpenOCD</td>
+      </tr>
+      <tr>
+          <td>liveWatch<br>.samplesPerSecond</td>
+          <td>number</td>
+          <td>Both</td>
+          <td>Maximum number of samples per second. Different from GUI refresh-rate, which is a user/workspace setting</td>
+      </tr>
+      <tr>
+          <td>loadFiles</td>
+          <td>string[]</td>
+          <td>Launch</td>
+          <td>List of files (hex/bin/elf files) to load/program instead of the executable file. Symbols are not loaded (see <code>symbolFiles</code>). Can be an empty list to specify none. If this property does not exist, then the executable is used to program the device</td>
+      </tr>
+      <tr>
+          <td>machine</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>Machine Type Selection - used for QEMU server type</td>
+      </tr>
+      <tr>
+          <td>numberOfProcessors</td>
+          <td>number</td>
+          <td>Both</td>
+          <td>Number of processors/cores in the target device.</td>
+      </tr>
+      <tr>
+          <td>objdumpPath</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>This setting can be used to override the objdump (used to find globals/statics) path user/workspace setting for a particular launch configuration. This should be the full pathname to the executable (or name of the executable if it is in your PATH). Note that other toolchain executables with the configured prefix must still be available. The program &rsquo;nm&rsquo; is also expected alongside</td>
+      </tr>
+      <tr>
+          <td>openOCDLaunchCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>OpenOCD command(s) after configuration files are loaded (-c options)</td>
+      </tr>
+      <tr>
+          <td>openOCDPreConfigLaunchCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>OpenOCD command(s) before configuration files are loaded (-c options)</td>
+      </tr>
+      <tr>
+          <td>overrideAttachCommands</td>
+          <td>string[]</td>
+          <td>Attach</td>
+          <td>You can use this to property to override the commands that are normally executed as part of attaching to a running target. In most cases it is preferable to use preAttachCommands and postAttachCommands to customize the GDB attach sequence.</td>
+      </tr>
+      <tr>
+          <td>overrideGDBServerStartedRegex</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>You can supply a regular expression (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions</a>) in the configuration property to override the output from the GDB Server that is looked for to determine if the GDB Server has started. Under most circumstances this will not be necessary - but could be needed as a result of a change in the output of a GDB Server making it incompatible with cortex-debug. This property has no effect for bmp or external GDB Server types.</td>
+      </tr>
+      <tr>
+          <td>overrideLaunchCommands</td>
+          <td>string[]</td>
+          <td>Launch</td>
+          <td>You can use this to property to override the commands that are normally executed as part of flashing and launching the target. In most cases it is preferable to use preLaunchCommands and postLaunchCommands to customize the GDB launch sequence.</td>
+      </tr>
+      <tr>
+          <td>overrideResetCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>You can use this to property to override the commands that are normally executed as part of reset the target. When not defined this will have the same value of overrideRestartCommands. In most cases it is preferable to use preResetCommands and postResetCommands to customize the GDB reset sequence.</td>
+      </tr>
+      <tr>
+          <td>overrideRestartCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>You can use this to property to override the commands that are normally executed as part of restarting the target. In most cases it is preferable to use preRestartCommands and postRestartCommands to customize the GDB restart sequence.</td>
+      </tr>
+      <tr>
+          <td>postAttachCommands</td>
+          <td>string[]</td>
+          <td>Attach</td>
+          <td>Additional GDB Commands to be executed after the main attach sequence has finished.</td>
+      </tr>
+      <tr>
+          <td>postLaunchCommands</td>
+          <td>string[]</td>
+          <td>Launch</td>
+          <td>Additional GDB Commands to be executed after the main launch sequence has finished.</td>
+      </tr>
+      <tr>
+          <td>postResetCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>Additional GDB Commands to be executed at the end of the reset sequence. When not defined this will have the same value of postRestartCommands.</td>
+      </tr>
+      <tr>
+          <td>postRestartCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>Additional GDB Commands to be executed at the end of the restart sequence.</td>
+      </tr>
+      <tr>
+          <td>postRestartSessionCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>Additional GDB Commands to be executed at the end of the re-start sequence, after a debug session has already started.</td>
+      </tr>
+      <tr>
+          <td>postStartSessionCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>Additional GDB Commands to be executed at the end of the start sequence, after a debug session has already started and runToEntryPoint is not specified.</td>
+      </tr>
+      <tr>
+          <td>preAttachCommands</td>
+          <td>string[]</td>
+          <td>Attach</td>
+          <td>Additional GDB Commands to be executed at the start of the main attach sequence (immediately after attaching to target).</td>
+      </tr>
+      <tr>
+          <td>preLaunchCommands</td>
+          <td>string[]</td>
+          <td>Launch</td>
+          <td>Additional GDB Commands to be executed at the start of the main launch sequence (immediately after attaching to target).</td>
+      </tr>
+      <tr>
+          <td>preResetCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>Additional GDB Commands to be executed at the beginning of the reset sequence (after interrupting execution). When not defined this will have the same value of preRestartCommands.</td>
+      </tr>
+      <tr>
+          <td>preRestartCommands</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>Additional GDB Commands to be executed at the beginning of the restart sequence (after interrupting execution).</td>
+      </tr>
+      <tr>
+          <td>runToEntryPoint</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>Applies to Launch/Restart/Reset, ignored for Attach. If enabled the debugger will run until the start of the given function.</td>
+      </tr>
+      <tr>
+          <td>searchDir</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>OpenOCD directories to search for config files and scripts (-s option). If no search directories are specified, it defaults to the configured cwd.</td>
+      </tr>
+      <tr>
+          <td>serverArgs</td>
+          <td>string[]</td>
+          <td>Both</td>
+          <td>Additional arguments to pass to GDB Server command line</td>
+      </tr>
+      <tr>
+          <td>serverpath</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>This setting can be used to override the GDB Server path user/workspace setting for a particular launch configuration. It is the full pathname to the executable or name of executable if it is in your PATH</td>
+      </tr>
+      <tr>
+          <td>servertype</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>GDB Server type - supported types are openocd, qemu and external.</td>
+      </tr>
+      <tr>
+          <td>showDevDebugOutput</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>Used to debug this extension. Prints all GDB responses to the console. &lsquo;raw&rsquo; prints gdb responses, &lsquo;parsed&rsquo; prints results after parsing, &lsquo;both&rsquo; prints both. &lsquo;vscode&rsquo; shows raw and VSCode interactions</td>
+      </tr>
+      <tr>
+          <td>showDevDebugTimestamps</td>
+          <td>boolean</td>
+          <td>Both</td>
+          <td>Show timestamps when &lsquo;showDevDebugOutput&rsquo; is enabled</td>
+      </tr>
+      <tr>
+          <td>svdFilePath</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>This is for &lsquo;PERIPHERALS&rsquo; window provided by <strong>XploR Eos IDE</strong>. It can be a simple file name or more based on a CMSIS pack or deviceName.</td>
+      </tr>
+      <tr>
+          <td>symbolFiles</td>
+          <td>object[]</td>
+          <td>Both</td>
+          <td>Array of ELF files to load symbols from instead of the executable file. Each item in the array cab be a string or an object. Program information is ignored (see <code>loadFiles</code>). Can be an empty list to specify none. If this property does not exist, then the executable is used for symbols</td>
+      </tr>
+      <tr>
+          <td>targetId</td>
+          <td>string | number</td>
+          <td>Both</td>
+          <td>On BMP this is the ID number that should be passed to the attach command (defaults to 1); for PyOCD this is the target identifier (only needed for custom hardware)</td>
+      </tr>
+      <tr>
+          <td>targetProcessor</td>
+          <td>number</td>
+          <td>Both</td>
+          <td>The processor you want to debug. Zero based integer index. Must be less than &rsquo;numberOfProcessors&rsquo;</td>
+      </tr>
+      <tr>
+          <td>toolchainPrefix</td>
+          <td>string</td>
+          <td>Both</td>
+          <td>This setting can be used to override the toolchainPrefix user setting for a particular launch configuration. Default = &ldquo;arm-none-eabi&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+
+	<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024&ndash;2025
+    <span class="td-footer__authors">SoC.one Inc. |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

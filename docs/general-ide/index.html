@@ -1,0 +1,471 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/general-ide/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>General IDE | XploR Eos IDE</title>
+<meta name="description" content="This page describes a general overview of the **XploR Eos IDE**.
+">
+<meta property="og:url" content="http://localhost:1313/docs/general-ide/">
+  <meta property="og:site_name" content="XploR Eos IDE">
+  <meta property="og:title" content="General IDE">
+  <meta property="og:description" content="This page describes a general overview of the **XploR Eos IDE**.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="General IDE">
+  <meta itemprop="description" content="This page describes a general overview of the **XploR Eos IDE**.">
+  <meta itemprop="datePublished" content="2024-10-10T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-01-17T15:09:14+07:00">
+  <meta itemprop="wordCount" content="1221">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="General IDE">
+  <meta name="twitter:description" content="This page describes a general overview of the **XploR Eos IDE**.">
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="9.03cm" height="9.03cm" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256"><defs><style>.cls-1{fill:url(#linear-gradient-4);filter:url(#drop-shadow-4)}.cls-2{fill:url(#linear-gradient-3);filter:url(#drop-shadow-3)}.cls-3{fill:url(#linear-gradient);filter:url(#drop-shadow-1)}.cls-4{fill:url(#linear-gradient-2);filter:url(#drop-shadow-2)}</style><linearGradient id="linear-gradient" x1="160.27" y1="185.15" x2="245.71" y2="185.15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8c52ff"/><stop offset=".24" stop-color="#a853d5"/><stop offset="1" stop-color="#ff5757"/></linearGradient><filter id="drop-shadow-1" x="147.99" y="126.04" width="115.68" height="123.84" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-2" x1="100.72" y1="124.74" x2="228.62" y2="124.74" xlink:href="#linear-gradient"/><filter id="drop-shadow-2" x="88.47" y="11.8" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-2" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-2" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-3" x1="10.29" y1="70.85" x2="95.73" y2="70.85" xlink:href="#linear-gradient"/><filter id="drop-shadow-3" x="-2.01" y="11.8" width="115.68" height="123.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-3" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-3" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-4" x1="27.38" y1="131.26" x2="155.28" y2="131.26" xlink:href="#linear-gradient"/><filter id="drop-shadow-4" x="15.03" y="18.28" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-4" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-4" operator="in"/><feComposite in="SourceGraphic"/></filter></defs><path class="cls-3" d="M167.42 138.44c21.73 16.26 63.84 47.73 65.11 48.68 33.21 24.82-4.6 41.4-23.01 44.38-8.43 1.38-18.52-1.28-29.08-6.17-21.46-23.92-25.79-53.73-13.03-86.89z"/><path class="cls-4" d="M157.44 45.54c29.15-23.12 60.59-31.36 70.45-5.1 7.97 21.21-51.39 74.35-60.47 98-12.76 33.16-8.43 62.98 13.03 86.89-23.04-10.68-48.22-32.1-62.91-45.49-39.63-36.3-2.24-100.87 39.9-134.3z"/><path class="cls-2" d="M88.58 117.56C66.85 101.3 24.74 69.83 23.47 68.88c-33.21-24.82 4.6-41.4 23.01-44.38 8.43-1.38 18.52 1.28 29.08 6.17 21.46 23.92 25.79 53.73 13.03 86.89z"/><path class="cls-1" d="M98.56 210.46c-29.15 23.12-60.59 31.36-70.45 5.1-7.97-21.21 51.39-74.35 60.47-98 12.76-33.16 8.43-62.98-13.03-86.89 23.04 10.68 48.22 32.1 62.91 45.49 39.63 36.3 2.24 100.87-39.9 134.3z"/></svg></span><span class="navbar-brand__name">XploR Eos IDE</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsoverview-li">
+  <input type="checkbox" id="m-docsoverview-check"/>
+  <label for="m-docsoverview-check"><a href="/docs/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewinstallation-li">
+  <input type="checkbox" id="m-docsoverviewinstallation-check"/>
+  <label for="m-docsoverviewinstallation-check"><a href="/docs/overview/installation/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewinstallation"><span class="">Installation</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewsystem-requirement-li">
+  <input type="checkbox" id="m-docsoverviewsystem-requirement-check"/>
+  <label for="m-docsoverviewsystem-requirement-check"><a href="/docs/overview/system-requirement/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewsystem-requirement"><span class="">System Requirements</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <input type="checkbox" id="m-docsgetting-started-check"/>
+  <label for="m-docsgetting-started-check"><a href="/docs/getting-started/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting started</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-freertos-li">
+  <input type="checkbox" id="m-docsgetting-startedhelloworld-freertos-check"/>
+  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="">Creating application with FreeRTOS</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsgeneral-ide-li">
+  <input type="checkbox" id="m-docsgeneral-ide-check" checked/>
+  <label for="m-docsgeneral-ide-check"><a href="/docs/general-ide/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__section" id="m-docsgeneral-ide"><span class="td-sidebar-nav-active-item">General IDE</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsproject-n-build-li">
+  <input type="checkbox" id="m-docsproject-n-build-check"/>
+  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Build and Quick Debug Projects</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build51_managing_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build51_managing_projects-check"/>
+  <label for="m-docsproject-n-build51_managing_projects-check"><a href="/docs/project-n-build/5.1_managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build51_managing_projects"><span class="">Managing Projects</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build52_building_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build52_building_projects-check"/>
+  <label for="m-docsproject-n-build52_building_projects-check"><a href="/docs/project-n-build/5.2_building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build52_building_projects"><span class="">Building Projects</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build53_debug_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build53_debug_projects-check"/>
+  <label for="m-docsproject-n-build53_debug_projects-check"><a href="/docs/project-n-build/5.3_debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build53_debug_projects"><span class="">Debug Projects</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdebug-li">
+  <input type="checkbox" id="m-docsdebug-check"/>
+  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug Project</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-configuration-li">
+  <input type="checkbox" id="m-docsdebugdebug-configuration-check"/>
+  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="">Debug Configuration</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-application-li">
+  <input type="checkbox" id="m-docsdebugdebug-application-check"/>
+  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="">Debug Application</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugadvanced-debug-li">
+  <input type="checkbox" id="m-docsdebugadvanced-debug-check"/>
+  <label for="m-docsdebugadvanced-debug-check"><a href="/docs/debug/advanced-debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugadvanced-debug"><span class="">Advanced Debug</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demo-li">
+  <input type="checkbox" id="m-docsexample-demo-check"/>
+  <label for="m-docsexample-demo-check"><a href="/docs/example-demo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demo"><span class="">Example Demo</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demobaremetal-li">
+  <input type="checkbox" id="m-docsexample-demobaremetal-check"/>
+  <label for="m-docsexample-demobaremetal-check"><a href="/docs/example-demo/baremetal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demobaremetal"><span class="">Baremetal Example</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"><a href="/docs/example-demo/baremetal/gnu-c-cpp-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld"><span class="">GNU C/C&#43;&#43; Helloworld</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalllvm-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalllvm-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalllvm-helloworld-check"><a href="/docs/example-demo/baremetal/llvm-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalllvm-helloworld"><span class="">LLVM Helloworld</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-feature-li">
+  <input type="checkbox" id="m-docsremote-feature-check"/>
+  <label for="m-docsremote-feature-check"><a href="/docs/remote-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsremote-feature"><span class="">Remote Feature</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfaq-li">
+  <input type="checkbox" id="m-docsfaq-check"/>
+  <label for="m-docsfaq-check"><a href="/docs/faq/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfaq"><span class="">Frequently Asked Questions</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#user-interface-introduction">User Interface Introduction</a></li>
+    <li><a href="#activity-bars">Activity Bars</a>
+      <ul>
+        <li><a href="#extensions">Extensions</a></li>
+      </ul>
+    </li>
+    <li><a href="#menus">Menus</a></li>
+    <li><a href="#editors">Editors</a></li>
+    <li><a href="#status-bar">Status Bar</a></li>
+    <li><a href="#terminal">Terminal</a>
+      <ul>
+        <li><a href="#integrated-terminal">Integrated Terminal</a></li>
+        <li><a href="#ssh-terminal">SSH Terminal</a></li>
+        <li><a href="#serial-terminal">Serial Terminal</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tag Cloud</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bare-metal/" data-taxonomy-term="bare-metal"><span class="taxonomy-label">Bare-Metal</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bitfile/" data-taxonomy-term="bitfile"><span class="taxonomy-label">Bitfile</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/docs/" data-taxonomy-term="docs"><span class="taxonomy-label">Docs</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/electron/" data-taxonomy-term="electron"><span class="taxonomy-label">Electron</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/freertos/" data-taxonomy-term="freertos"><span class="taxonomy-label">Freertos</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/hardware/" data-taxonomy-term="hardware"><span class="taxonomy-label">Hardware</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/installation/" data-taxonomy-term="installation"><span class="taxonomy-label">Installation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/launch-configuration/" data-taxonomy-term="launch-configuration"><span class="taxonomy-label">Launch Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/linux/" data-taxonomy-term="linux"><span class="taxonomy-label">Linux</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/qemu/" data-taxonomy-term="qemu"><span class="taxonomy-label">QEMU</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/sample/" data-taxonomy-term="sample"><span class="taxonomy-label">Sample</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/test/" data-taxonomy-term="test"><span class="taxonomy-label">Test</span><span class="taxonomy-count">9</span></a></li>
+        </ul>
+    </div>
+  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/examples/" data-taxonomy-term="examples"><span class="taxonomy-label">Examples</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/placeholders/" data-taxonomy-term="placeholders"><span class="taxonomy-label">Placeholders</span><span class="taxonomy-count">6</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    General IDE</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>General IDE</h1>
+  <div class="lead">This page describes a general overview of the <strong>XploR Eos IDE</strong>.</div>
+	<header class="article-meta">
+		
+  </header>
+	<h2 id="user-interface-introduction">User Interface Introduction<a class="td-heading-self-link" href="#user-interface-introduction" aria-label="Heading self-link"></a></h2>
+<p>Welcome to <strong>XploR Eos IDE</strong>, a powerful and extensible Integrated Development Environment (IDE) designed for developers who write embedded software. Based on the <a href="https://theia-ide.org/">Theia IDE</a> open-source software framework, XploR Eos IDE provides a seamless and customized environment tailored for both beginners and experienced developers.</p>
+<p><strong>XploR Eos IDE</strong> uses a standard IDE layout, with a project and file explorer on the left and an editor on the right, designed to maximize space for essential development tasks. The key sections of <strong>XploR Eos IDE</strong> include:</p>
+<ul>
+<li><strong>Editor</strong>: The main area for writing and editing code files.</li>
+<li><strong>Activity Bar</strong>: Provides various views for different tasks, such as the Explorer for project management or the Debug view for debugging sessions.</li>
+<li><strong>Status Bar</strong>: Displays useful information about the open files and the current workspace.</li>
+<li><strong>Side Bar</strong>: Contains different views like the Explorer or debugging tools, based on the selected activity.</li>
+<li><strong>Panels</strong>: Positioned below the editor, panels show information such as build status, debugger output, and terminal access. These panels can be moved to the right or repositioned elsewhere in the main window, according to user preferences.
+<img src="/images/general-ide/general-ide-1.png" alt=""></li>
+</ul>
+<h2 id="activity-bars">Activity Bars<a class="td-heading-self-link" href="#activity-bars" aria-label="Heading self-link"></a></h2>
+<p>The left Activity Bar feature six main views:</p>
+<ul>
+<li><strong>Explorer</strong>: Navigate, open, and manage files and folders within your project. For additional details about the Explorer, click <a href="/docs/project-n-build/5.1_managing_projects/#xplorer">here</a>.</li>
+<li><strong>Search</strong>: Look for files in your current workspace.</li>
+<li><strong>Run and debug</strong>: Execute your program in debugging mode while monitoring threads, the call stack, variables, watched expressions, and breakpoints. More information about the debugger can be found <strong>here</strong></li>
+<li><strong>Source control</strong>: Monitor changes in your repository, including modified files, staged changes, and merge changes. Here, you can stage, unstage, and commit your files. The source control icon display the number of changes currently present in your repository.</li>
+<li><strong>Extensions</strong>: Add tools to enhance your development process by installing extensions. You can find additional details about the <a href="/docs/general-ide/#extensions">extensions</a></li>
+<li><strong>XploR Labs</strong>: Connect to cloud from local IDE to perform remote workspace and remote debug features</li>
+</ul>
+<p>At the bottom of the left Activity Bar, you&rsquo;ll find a <strong>Settings</strong> icon, which provides access to general settings, keyboard shortcuts, and options to modify color themes and file icons.</p>
+<p>On the right side, the Activity Bar includes an Outline for symbols in your file, facilitating easy navigation. As you open new views, they will automatically populate your Activity Bars. By right- clicking on a view icon, you can choose to close it, pin it to the Activity Bar, or collapse the opened view. You can also drag views between the Activity Bars and the Panel.</p>
+<h3 id="extensions">Extensions<a class="td-heading-self-link" href="#extensions" aria-label="Heading self-link"></a></h3>
+<p>You can search for and install extensions through the Extensions icon on the Activity Bar. For instance, you might search for the Code Spell Checker extension.</p>
+<p><img src="/images/general-ide/general-ide-3.png" alt=""></p>
+<p>This tool helps you identify and correct spelling errors in your code and documentation by highlighting misspelled words.</p>
+<p><img src="/images/general-ide/general-ide-4.png" alt=""></p>
+<p>To remove an extension, go to the Extensions icon, find it either by searching or under the installed tab, and select uninstall. A wide range of extensions is available for different purposes, which you can explore at <a href="https://open-vsx.org/">https://open-vsx.org/</a>. You can always switch to another extension as needed.</p>
+<h2 id="menus">Menus<a class="td-heading-self-link" href="#menus" aria-label="Heading self-link"></a></h2>
+<p>Menus play a key role in providing a user-friendly interface for accessing various commands and features. Here&rsquo;s an overview of how menus function in <strong>XploR Eos IDE</strong>:</p>
+<p><img src="/images/general-ide/general-ide-5.png" alt=""></p>
+<ul>
+<li>
+<p><strong>File</strong>: This menu provides options related to workspace and project management. Common actions include:</p>
+<p><img src="/images/general-ide/general-ide-6.png" alt=""></p>
+<!-- - _Open Workspace_: This option allows you to open an existing workspace by selecting a specific folder from your file system. When you choose this option, a file dialog will appear, prompting you to navigate to the desired folder.
+- _Open Recent Workspace_: This feature provides a list of recently opened workspaces, allowing you to quickly switch back to a workspace you were previously working on.
+- _Add Folder to Workspace_: If you want to work with multiple project folders within a single workspace, this option allows you to add additional folders to your current workspace. -->
+<p>In addition to these, the <strong>File</strong> menu includes several other options for managing files and workspaces, enabling more granular control over your development environment.</p>
+</li>
+<li>
+<p><strong>Edit</strong>: Provides standard editing commands.</p>
+</li>
+<li>
+<p><strong>Selection</strong>: Tools for managing selections in the editor.</p>
+</li>
+<li>
+<p><strong>View</strong>: Controls the visibility of different panels and views.</p>
+<p><img src="/images/general-ide/general-ide-7.png" alt=""></p>
+</li>
+<li>
+<p><strong>Go</strong>: Helps with navigation through files and symbols.</p>
+</li>
+<li>
+<p><strong>Run</strong>: Includes options for running and debugging your code.</p>
+</li>
+<li>
+<p><strong>Terminal</strong>: Provides access to the integrated terminal, including features for connecting to remote machines via SSH and interacting with serial devices for configuration and management. For more details, refer to the sections on <a href="/docs/general-ide/#ssh-terminal">SSH Terminal</a> and <a href="/docs/general-ide/#serial-terminal">Serial Terminal</a> in the documentation.</p>
+</li>
+<li>
+<p><strong>Help</strong>: Offers access to documentation.</p>
+</li>
+</ul>
+<h2 id="editors">Editors<a class="td-heading-self-link" href="#editors" aria-label="Heading self-link"></a></h2>
+<p>The <strong>XploR Eos IDE</strong> editor is built on the VS Code editor, sharing many similarities. For more information, please refer to the <a href="https://code.visualstudio.com/docs/editor/codebasics">Basic Editing</a>. Keep in mind that while the core functionalities of the editors are very similar, there are some differences between the two environments.</p>
+<h2 id="status-bar">Status Bar<a class="td-heading-self-link" href="#status-bar" aria-label="Heading self-link"></a></h2>
+<p>The Status Bar displays information about your files. You can interact with this information to modify settings, check for errors and warnings, view notifications, and toggle the Panel. Through the Status Bar, you can adjust the end-of-line sequence, encoding, indentation, and language mode settings. By clicking on the line number, you can quickly navigate to a specific line in your file.</p>
+<h2 id="terminal">Terminal<a class="td-heading-self-link" href="#terminal" aria-label="Heading self-link"></a></h2>
+<h3 id="integrated-terminal">Integrated Terminal<a class="td-heading-self-link" href="#integrated-terminal" aria-label="Heading self-link"></a></h3>
+<p>Create a new full featured integrated terminal that starts at the root of your workspace.</p>
+<p><img src="/images/general-ide/general-ide-8.png" alt=""></p>
+<p>An external can be opened by using <strong>Ctrl+Shift+`</strong>. The shell settings can be modified in <strong>File -&gt; Preferences -&gt; Settings -&gt; Terminal</strong>.</p>
+<p>You can split the terminal by pressing the <strong>Split Terminal</strong> icon in the top right corner of the terminal or move terminal to the secondary view.</p>
+<p><img src="/images/general-ide/general-ide-8.1.png" alt=""></p>
+<p><img src="/images/general-ide/general-ide-8.2.png" alt=""></p>
+<h3 id="ssh-terminal">SSH Terminal<a class="td-heading-self-link" href="#ssh-terminal" aria-label="Heading self-link"></a></h3>
+<p>Provides a user-friendly dialog interface that enables users to securely connect to remote machines using the SSH protocol.</p>
+<p>To open this terminal, click on the <strong>Terminal</strong> and select <strong>New SSH Terminal</strong>.</p>
+<p><img src="/images/general-ide/general-ide-14.png" alt=""></p>
+<p>A dialog will appear, prompting you to enter the necessary connection details.</p>
+<p><img src="/images/general-ide/general-ide-9.png" alt=""></p>
+<p>In the dialog, you will find fields to input the following information:</p>
+<ul>
+<li><strong>Host</strong>: Enter the IP address or hostname of the remote machine you wish to connect to.</li>
+<li><strong>Username</strong>: Provide your username for authentication on the remote machine.</li>
+<li><strong>Password</strong>: Input your password (masked for security) associated with the specified username.
+If you prefer not to use a password for SSH authentication, you can utilize a private key. Here&rsquo;s how you can do it:
+<ul>
+<li>Generate an SSH key pair: If you haven&rsquo;t already generated an SSH key pair, you can create one using the following command in your terminal:
+<code>ssh-keygen -t rsa -b 2048</code>. This will create a public key (<code>id_rsa.pub</code>) and a private key (<code>id_rsa</code>) in your <code>~/.ssh</code> directory.</li>
+<li>Copy the contents of your public key (id_rsa.pub) to the remote server&rsquo;s <code>~/.ssh/authorized_keys</code> file. You can use the following command: <code>ssh-copy-id username@hostname</code></li>
+<li>Once the public key is added to the remote server, you can connect to it without entering a password. In the SSH Terminal dialog, simply leave the password field blank.</li>
+</ul>
+</li>
+<li><strong>Port</strong>: Specify the port number for the SSH connection (default is 22).</li>
+</ul>
+<p>Click <strong>OK</strong> button to establish the SSH connection.</p>
+<p>When the connection to the remote server is successful, a message will be displayed in the <strong>Panel</strong>.</p>
+<p><img src="/images/general-ide/general-ide-10.png" alt=""></p>
+<h3 id="serial-terminal">Serial Terminal<a class="td-heading-self-link" href="#serial-terminal" aria-label="Heading self-link"></a></h3>
+<p>The Serial Terminal feature allows users to establish a serial connection on a specified port. Follow these steps to set up and verify the serial communication:</p>
+<p>To open the <strong>Serial Terminal</strong>, in the <strong>Terminal</strong> View of your development environment, select <strong>New Serial Terminal</strong> to access the serial communication configuration.</p>
+<p><img src="/images/general-ide/general-ide-11.png" alt=""></p>
+<p>On Linux, choose the corresponding <code>/dev/ttyUSBx</code> port. You can list available ports using <code>ls /dev/ttyUSB*</code> in the terminal.</p>
+<p>Make sure that the serial connection settings are configured correctly. Typical parameters include:</p>
+<ul>
+<li><strong>Baud Rate:</strong> e.g., 115200</li>
+<li><strong>Data Bits:</strong> 8</li>
+<li><strong>Stop Bits:</strong> 1</li>
+<li><strong>Parity:</strong> None</li>
+</ul>
+<p><img src="/images/general-ide/general-ide-12.png" alt=""></p>
+<p>After configuring, connect to the serial terminal by click the <strong>Connect</strong> button. If the setup is correct, there is a terminal with the title being the name of the port opened and the output from that port.</p>
+<p><img src="/images/general-ide/general-ide-13.png" alt=""></p>
+  <!-- **Troubleshooting:**
+  - No output appears:
+    - Ensure the correct port is selected. Double-check the `/dev/ttyUSBx` port or COM port name.
+    - Confirm that the core is powered on and properly connected to your system.
+    - Verify the baud rate and other connection settings match the requirements specified for the device
+  - Port not listed
+    - On Linux, ensure you have permission to access the `/dev/ttyUSBx` port. 
+    - You can use `sudo chmod 0777 /dev/ttyUSBx ` to temporarily change the permissions of the port. This command gives all users full access to the port, but it's only effective until the system restarts or the device is reconnected. -->
+
+  <div class="section-index">
+    
+    
+    </div>
+<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+</div>
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024&ndash;2025
+    <span class="td-footer__authors">SoC.one Inc. |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

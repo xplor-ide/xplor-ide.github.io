@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Installation on XploR Eos IDE</title>
+    <link>http://localhost:1313/tags/installation/</link>
+    <description>Recent content in Installation on XploR Eos IDE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/tags/installation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation</title>
+      <link>http://localhost:1313/docs/overview/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/overview/installation/</guid>
+      <description>&lt;h2 id=&#34;xplor-eos-ide-installation&#34;&gt;XploR Eos IDE Installation&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#xplor-eos-ide-installation&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Download the .deb file: Visit the official website and download the .deb file for the desktop version.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Install the .deb file using the Terminal:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Open a terminal and navigate to the directory containing the .deb file&lt;/li&gt;&#xA;&lt;li&gt;Run the following command to install the package:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;sudo&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;dpkg&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;XploREosIDE&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;deb&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Launch the IDE: After the installation completes, you can start the IDE by searching for it in the application menu or running the command in the terminal:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

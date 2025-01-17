@@ -1,0 +1,506 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Debug Application | XploR Eos IDE</title>
+<meta name="description" content="XploR Eos IDE provides an integrated Debug View, where users can start, stop, and control the debugging process, view variables, and monitor the call stack. Additionally, multiple data views give a comprehensive overview by revealing the status of different subsystems of the target. This section outlines some of these views and features.
+The debug behavior will differ depending on whether an Automatic or Manual debug launch is performed.
+For an Automatic debug launch, you will switch from the Explorer to the Debug view in the Side Bar, displaying the default arrangement of views as shown below. The Call Stack view provides information on the current program. In the source code view, the program is usually displayed as halted at the beginning of the main() function (though this may vary depending on the loaded program). Below the Threads, Call Stack View, the Variables, Watch, Breakpoint are also available.">
+<meta property="og:url" content="http://localhost:1313/docs/debug/debug-application/">
+  <meta property="og:site_name" content="XploR Eos IDE">
+  <meta property="og:title" content="Debug Application">
+  <meta property="og:description" content="XploR Eos IDE provides an integrated Debug View, where users can start, stop, and control the debugging process, view variables, and monitor the call stack. Additionally, multiple data views give a comprehensive overview by revealing the status of different subsystems of the target. This section outlines some of these views and features.
+The debug behavior will differ depending on whether an Automatic or Manual debug launch is performed.
+For an Automatic debug launch, you will switch from the Explorer to the Debug view in the Side Bar, displaying the default arrangement of views as shown below. The Call Stack view provides information on the current program. In the source code view, the program is usually displayed as halted at the beginning of the main() function (though this may vary depending on the loaded program). Below the Threads, Call Stack View, the Variables, Watch, Breakpoint are also available.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2024-10-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-17T15:08:41+07:00">
+    <meta property="article:tag" content="Debug">
+
+  <meta itemprop="name" content="Debug Application">
+  <meta itemprop="description" content="XploR Eos IDE provides an integrated Debug View, where users can start, stop, and control the debugging process, view variables, and monitor the call stack. Additionally, multiple data views give a comprehensive overview by revealing the status of different subsystems of the target. This section outlines some of these views and features.
+The debug behavior will differ depending on whether an Automatic or Manual debug launch is performed.
+For an Automatic debug launch, you will switch from the Explorer to the Debug view in the Side Bar, displaying the default arrangement of views as shown below. The Call Stack view provides information on the current program. In the source code view, the program is usually displayed as halted at the beginning of the main() function (though this may vary depending on the loaded program). Below the Threads, Call Stack View, the Variables, Watch, Breakpoint are also available.">
+  <meta itemprop="datePublished" content="2024-10-15T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-01-17T15:08:41+07:00">
+  <meta itemprop="wordCount" content="1455">
+  <meta itemprop="keywords" content="Debug">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Debug Application">
+  <meta name="twitter:description" content="XploR Eos IDE provides an integrated Debug View, where users can start, stop, and control the debugging process, view variables, and monitor the call stack. Additionally, multiple data views give a comprehensive overview by revealing the status of different subsystems of the target. This section outlines some of these views and features.
+The debug behavior will differ depending on whether an Automatic or Manual debug launch is performed.
+For an Automatic debug launch, you will switch from the Explorer to the Debug view in the Side Bar, displaying the default arrangement of views as shown below. The Call Stack view provides information on the current program. In the source code view, the program is usually displayed as halted at the beginning of the main() function (though this may vary depending on the loaded program). Below the Threads, Call Stack View, the Variables, Watch, Breakpoint are also available.">
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="9.03cm" height="9.03cm" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256"><defs><style>.cls-1{fill:url(#linear-gradient-4);filter:url(#drop-shadow-4)}.cls-2{fill:url(#linear-gradient-3);filter:url(#drop-shadow-3)}.cls-3{fill:url(#linear-gradient);filter:url(#drop-shadow-1)}.cls-4{fill:url(#linear-gradient-2);filter:url(#drop-shadow-2)}</style><linearGradient id="linear-gradient" x1="160.27" y1="185.15" x2="245.71" y2="185.15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8c52ff"/><stop offset=".24" stop-color="#a853d5"/><stop offset="1" stop-color="#ff5757"/></linearGradient><filter id="drop-shadow-1" x="147.99" y="126.04" width="115.68" height="123.84" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-2" x1="100.72" y1="124.74" x2="228.62" y2="124.74" xlink:href="#linear-gradient"/><filter id="drop-shadow-2" x="88.47" y="11.8" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-2" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-2" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-3" x1="10.29" y1="70.85" x2="95.73" y2="70.85" xlink:href="#linear-gradient"/><filter id="drop-shadow-3" x="-2.01" y="11.8" width="115.68" height="123.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-3" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-3" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-4" x1="27.38" y1="131.26" x2="155.28" y2="131.26" xlink:href="#linear-gradient"/><filter id="drop-shadow-4" x="15.03" y="18.28" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-4" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-4" operator="in"/><feComposite in="SourceGraphic"/></filter></defs><path class="cls-3" d="M167.42 138.44c21.73 16.26 63.84 47.73 65.11 48.68 33.21 24.82-4.6 41.4-23.01 44.38-8.43 1.38-18.52-1.28-29.08-6.17-21.46-23.92-25.79-53.73-13.03-86.89z"/><path class="cls-4" d="M157.44 45.54c29.15-23.12 60.59-31.36 70.45-5.1 7.97 21.21-51.39 74.35-60.47 98-12.76 33.16-8.43 62.98 13.03 86.89-23.04-10.68-48.22-32.1-62.91-45.49-39.63-36.3-2.24-100.87 39.9-134.3z"/><path class="cls-2" d="M88.58 117.56C66.85 101.3 24.74 69.83 23.47 68.88c-33.21-24.82 4.6-41.4 23.01-44.38 8.43-1.38 18.52 1.28 29.08 6.17 21.46 23.92 25.79 53.73 13.03 86.89z"/><path class="cls-1" d="M98.56 210.46c-29.15 23.12-60.59 31.36-70.45 5.1-7.97-21.21 51.39-74.35 60.47-98 12.76-33.16 8.43-62.98-13.03-86.89 23.04 10.68 48.22 32.1 62.91 45.49 39.63 36.3 2.24 100.87-39.9 134.3z"/></svg></span><span class="navbar-brand__name">XploR Eos IDE</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsoverview-li">
+  <input type="checkbox" id="m-docsoverview-check"/>
+  <label for="m-docsoverview-check"><a href="/docs/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewinstallation-li">
+  <input type="checkbox" id="m-docsoverviewinstallation-check"/>
+  <label for="m-docsoverviewinstallation-check"><a href="/docs/overview/installation/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewinstallation"><span class="">Installation</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewsystem-requirement-li">
+  <input type="checkbox" id="m-docsoverviewsystem-requirement-check"/>
+  <label for="m-docsoverviewsystem-requirement-check"><a href="/docs/overview/system-requirement/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewsystem-requirement"><span class="">System Requirements</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <input type="checkbox" id="m-docsgetting-started-check"/>
+  <label for="m-docsgetting-started-check"><a href="/docs/getting-started/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting started</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-freertos-li">
+  <input type="checkbox" id="m-docsgetting-startedhelloworld-freertos-check"/>
+  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="">Creating application with FreeRTOS</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgeneral-ide-li">
+  <input type="checkbox" id="m-docsgeneral-ide-check"/>
+  <label for="m-docsgeneral-ide-check"><a href="/docs/general-ide/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsgeneral-ide"><span class="">General IDE</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsproject-n-build-li">
+  <input type="checkbox" id="m-docsproject-n-build-check"/>
+  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Build and Quick Debug Projects</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build51_managing_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build51_managing_projects-check"/>
+  <label for="m-docsproject-n-build51_managing_projects-check"><a href="/docs/project-n-build/5.1_managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build51_managing_projects"><span class="">Managing Projects</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build52_building_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build52_building_projects-check"/>
+  <label for="m-docsproject-n-build52_building_projects-check"><a href="/docs/project-n-build/5.2_building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build52_building_projects"><span class="">Building Projects</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build53_debug_projects-li">
+  <input type="checkbox" id="m-docsproject-n-build53_debug_projects-check"/>
+  <label for="m-docsproject-n-build53_debug_projects-check"><a href="/docs/project-n-build/5.3_debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build53_debug_projects"><span class="">Debug Projects</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdebug-li">
+  <input type="checkbox" id="m-docsdebug-check" checked/>
+  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug Project</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-configuration-li">
+  <input type="checkbox" id="m-docsdebugdebug-configuration-check"/>
+  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="">Debug Configuration</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdebugdebug-application-li">
+  <input type="checkbox" id="m-docsdebugdebug-application-check" checked/>
+  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="td-sidebar-nav-active-item">Debug Application</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugadvanced-debug-li">
+  <input type="checkbox" id="m-docsdebugadvanced-debug-check"/>
+  <label for="m-docsdebugadvanced-debug-check"><a href="/docs/debug/advanced-debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugadvanced-debug"><span class="">Advanced Debug</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demo-li">
+  <input type="checkbox" id="m-docsexample-demo-check"/>
+  <label for="m-docsexample-demo-check"><a href="/docs/example-demo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demo"><span class="">Example Demo</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demobaremetal-li">
+  <input type="checkbox" id="m-docsexample-demobaremetal-check"/>
+  <label for="m-docsexample-demobaremetal-check"><a href="/docs/example-demo/baremetal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demobaremetal"><span class="">Baremetal Example</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"><a href="/docs/example-demo/baremetal/gnu-c-cpp-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld"><span class="">GNU C/C&#43;&#43; Helloworld</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalllvm-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalllvm-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalllvm-helloworld-check"><a href="/docs/example-demo/baremetal/llvm-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalllvm-helloworld"><span class="">LLVM Helloworld</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-feature-li">
+  <input type="checkbox" id="m-docsremote-feature-check"/>
+  <label for="m-docsremote-feature-check"><a href="/docs/remote-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsremote-feature"><span class="">Remote Feature</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfaq-li">
+  <input type="checkbox" id="m-docsfaq-check"/>
+  <label for="m-docsfaq-check"><a href="/docs/faq/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfaq"><span class="">Frequently Asked Questions</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#debug-view">Debug View</a>
+      <ul>
+        <li><a href="#threads-view">Threads View</a></li>
+        <li><a href="#call-stack-view">Call Stack View</a></li>
+        <li><a href="#variables-view">Variables View</a></li>
+        <li><a href="#watch-view">Watch View</a></li>
+      </ul>
+    </li>
+    <li><a href="#register-view">Register View</a></li>
+    <li><a href="#peripheral-view">Peripheral View</a></li>
+    <li><a href="#disassembly-view">Disassembly View</a></li>
+    <li><a href="#memory-view">Memory View</a></li>
+    <li><a href="#rtos-view">RTOS View</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
+      <h5 class="taxonomy-title">Tag Cloud</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bare-metal/" data-taxonomy-term="bare-metal"><span class="taxonomy-label">Bare-Metal</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bitfile/" data-taxonomy-term="bitfile"><span class="taxonomy-label">Bitfile</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/docs/" data-taxonomy-term="docs"><span class="taxonomy-label">Docs</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/electron/" data-taxonomy-term="electron"><span class="taxonomy-label">Electron</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/freertos/" data-taxonomy-term="freertos"><span class="taxonomy-label">Freertos</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/hardware/" data-taxonomy-term="hardware"><span class="taxonomy-label">Hardware</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/installation/" data-taxonomy-term="installation"><span class="taxonomy-label">Installation</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/launch-configuration/" data-taxonomy-term="launch-configuration"><span class="taxonomy-label">Launch Configuration</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/linux/" data-taxonomy-term="linux"><span class="taxonomy-label">Linux</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/qemu/" data-taxonomy-term="qemu"><span class="taxonomy-label">QEMU</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/sample/" data-taxonomy-term="sample"><span class="taxonomy-label">Sample</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/test/" data-taxonomy-term="test"><span class="taxonomy-label">Test</span><span class="taxonomy-count">9</span></a></li>
+        </ul>
+    </div>
+  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
+      <h5 class="taxonomy-title">Categories</h5>
+      <ul class="taxonomy-terms">
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/examples/" data-taxonomy-term="examples"><span class="taxonomy-label">Examples</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/placeholders/" data-taxonomy-term="placeholders"><span class="taxonomy-label">Placeholders</span><span class="taxonomy-count">6</span></a></li>
+        </ul>
+    </div>
+  
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/debug/">Debug Project</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Debug Application</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Debug Application</h1>
+	
+	<header class="article-meta">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span></a></li>
+    </ul>
+</div>
+
+  </header>
+	<p><strong>XploR Eos IDE</strong> provides an integrated Debug View, where users can start, stop, and control the debugging process, view variables, and monitor the call stack. Additionally, multiple data views give a comprehensive overview by revealing the status of different subsystems of the target. This section outlines some of these views and features.</p>
+<p>The debug behavior will differ depending on whether an Automatic or Manual debug launch is performed.</p>
+<p>For an Automatic debug launch, you will switch from the Explorer to the Debug view in the Side Bar, displaying the default arrangement of views as shown below. The Call Stack view provides information on the current program. In the source code view, the program is usually displayed as halted at the beginning of the <code>main()</code> function (though this may vary depending on the loaded program). Below the <strong>Threads, Call Stack View, the Variables, Watch, Breakpoint</strong> are also available.</p>
+<p>Here&rsquo;s an example of an active debug session from template debug configuration:</p>
+<p><img src="/images/debug/debug-3.png" alt=""></p>
+<p>The following sections showcase some of the most commonly used views specifically designed for debugging.</p>
+<h2 id="debug-view">Debug View<a class="td-heading-self-link" href="#debug-view" aria-label="Heading self-link"></a></h2>
+<p>The basic debugging controls are located in the top-left corner of the Debug View, with toolbars providing various functionalities:</p>
+<p><img src="/images/debug/debug-2.png" alt=""></p>
+<p><strong>Top Toolbar:</strong></p>
+<ul>
+<li>Start Debugging: Initiates a debug session using the selected launch configuration.</li>
+<li>Launch Configuration: A dropdown menu listing available launch configurations.</li>
+<li>Open <code>launch.json</code>: Opens the JSON file containing the launch configuration settings.</li>
+<li>Debug Console: Opens the Debug Console view for interacting with the debugger.</li>
+</ul>
+<p><strong>Bottom Toolbar</strong></p>
+<ul>
+<li>Continue: Resumes the execution of the target core.</li>
+<li>Pause: Stops the target core&rsquo;s execution. The Continue button changes to Pause when clicked, and vice versa.</li>
+<li>Step Over: Executes the current source line and skips over any functions or subroutines, running their internal code in one step.</li>
+<li>Step Into: Executes the current line but steps inside functions or subroutines, allowing for step-by-step debugging of the internal code.</li>
+<li>Step Out: Completes the execution of the current function or subroutine and returns to the calling location.</li>
+<li>Restart: Restarts the session when symbols or a program have been loaded, resetting.</li>
+<li>Stop: Ends the debug session and disconnects from hardware or QEMU.</li>
+</ul>
+<h3 id="threads-view">Threads View<a class="td-heading-self-link" href="#threads-view" aria-label="Heading self-link"></a></h3>
+<p>The <strong>Threads View</strong> is located at the top of the Debug View on the left side. It shows a list of available cores for debugging, along with the status of each core.</p>
+<p><img src="/images/debug/debug-4.png" alt=""></p>
+<p>Right-clicking on a core will bring up the following options:</p>
+<ul>
+<li>Continue: Resumes execution of the target core.</li>
+<li>Step Over: Executes the next line of code, skipping over the details of subroutines or functions and running them as a whole.</li>
+<li>Step Into: Executes the next line of code but goes inside subroutines or functions, allowing you to step through the internal code line by line.</li>
+<li>Step Out: Completes the remaining execution of the current subroutine and returns to the point where it was originally called.</li>
+</ul>
+<p><img src="/images/debug/debug-5.png" alt=""></p>
+<h3 id="call-stack-view">Call Stack View<a class="td-heading-self-link" href="#call-stack-view" aria-label="Heading self-link"></a></h3>
+<p>The <strong>Call Stack View</strong> displays the functions currently on the stack, listed in the order in which they are being executed.</p>
+<p><img src="/images/debug/debug-6.png" alt=""></p>
+<p>Each entry displays the following details:</p>
+<ul>
+<li>The name of the function being executed</li>
+<li>The memory address of the function</li>
+<li>The name of the file containing the function</li>
+<li>The line number in the file where the function is defined</li>
+</ul>
+<p>By right-clicking in the <strong>Call Stack View</strong>, you can access options to copy the call stack, restart frame or open the <a href="/docs/debug/debug-application/#disassembly-view">Disassembly View</a>.</p>
+<p><img src="/images/debug/debug-7.png" alt=""></p>
+<h3 id="variables-view">Variables View<a class="td-heading-self-link" href="#variables-view" aria-label="Heading self-link"></a></h3>
+<p><img src="/images/debug/debug-8.png" alt=""></p>
+<p>The <strong>Variables</strong> view displays the local variables associated with the function currently highlighted in the <a href="/docs/debug/debug-application/#call-stack-view">Call Stack View</a>. This includes:</p>
+<ul>
+<li>Local Variables: Variables defined within the currently active function</li>
+<li>Static Variables: Variables that maintain their value across multiple calls to the same function.</li>
+<li>Global Variables: Variables that can be accessed from any part of the program.</li>
+</ul>
+<p>Additionally, the view includes the CPU register that shows details in the <a href="/docs/debug/debug-application/#register-view">Register View</a></p>
+<h3 id="watch-view">Watch View<a class="td-heading-self-link" href="#watch-view" aria-label="Heading self-link"></a></h3>
+<p><strong>Watch</strong> view allows developers to monitor specific variables or expressions during debugging. This feature is crucial for tracking values as they change throughout program execution, enabling efficient troubleshooting.</p>
+<h2 id="register-view">Register View<a class="td-heading-self-link" href="#register-view" aria-label="Heading self-link"></a></h2>
+<p>The Register View is a subsection of the Variables View, providing information about CPU registers during a debugging session. It shows a list of available CPU registers, typically including general-purpose registers, special registers, and status registers.</p>
+<p>Common registers displayed may include:</p>
+<ul>
+<li>General-Purpose Registers (e.g., R0, R1, R2): Used for arithmetic operations and data storage.</li>
+<li>Status Registers (e.g., PSW, SR): Contain flags that provide information about the processor&rsquo;s state.</li>
+<li>Pointer Registers (e.g., SP, PC): Used to store memory addresses for the stack pointer and program counter.</li>
+</ul>
+<p><img src="/images/debug/debug-9.png" alt=""></p>
+<p>The Register View updates in real-time as the program executes, allowing developers to monitor changes in register values at each breakpoint or step.</p>
+<h2 id="peripheral-view">Peripheral View<a class="td-heading-self-link" href="#peripheral-view" aria-label="Heading self-link"></a></h2>
+<p>You can access the <strong>Peripheral View</strong> by navigating to View &gt; Peripheral View Panel. This view located on the panel, provides a comprehensive overview of the peripheral devices associated with the target system.</p>
+<p><img src="/images/debug/debug-10.png" alt=""></p>
+<p>Click on a peripheral to expand its details and see its registers. Common peripherals inlcude timers, UARTs, GPIO ports, ADCs, and more. The view often presents a hierarchical tree structure showing the peripherals available on the microcontroller. The current values of the registers are displayed, allowing you to view the data in different formats (decimal, hexadecimal, binary).</p>
+<p><img src="/images/debug/debug-11.png" alt=""></p>
+<p>When using the Peripheral View, you may notice that the values of some peripheral registers are hightlighted in yellow. This indicates that these values have recently changed, providing a quick visual cue to help you identify and track updates in the hardware&rsquo;s status or configuration.</p>
+<h2 id="disassembly-view">Disassembly View<a class="td-heading-self-link" href="#disassembly-view" aria-label="Heading self-link"></a></h2>
+<p>This view allows users to view the assembly level instructions generated from the compiled source code. It provides a detailed view of how the high-level code translates into low-level machine instructions that are executed by the CPU.</p>
+<p><img src="/images/debug/debug-13.png" alt=""></p>
+<p>Several fields are present in the <strong>Disassembly</strong> view by default:</p>
+<ul>
+<li>
+<p>The first column displays the memory address of each assembly instruction, indicating where in the memory the instruction is stored and will be executed.</p>
+</li>
+<li>
+<p>The second column contains the names of functions, labels, or symbols related to specific points in the code, such as the start of a function or the location of a jump in a loop.</p>
+</li>
+<li>
+<p>The third column shows the binary machine code representation of each assembly instruction. This is the machine-level code that the CPU will execute.</p>
+</li>
+<li>
+<p>The fourth and fifth columns show the correspoding assembly instruction.</p>
+</li>
+</ul>
+<p>The first line of each instruction block contains the source code line that matches each assembly instruction.</p>
+<p>How to use the Disassembly View</p>
+<ol>
+<li>Set Up Your Development Environment</li>
+</ol>
+<ul>
+<li>Debug Configuration: Ensure your project is built in debug mode to include symbolic information (this allows the debugger to map source lines to assembly instructions).</li>
+<li>Start Debugging: Run your application in debug mode and set breakpoints where you want to analyze the code.</li>
+</ul>
+<ol start="2">
+<li>Navigate Between Views</li>
+</ol>
+<ul>
+<li>Accessing Source Code: When you hit a breakpoint, your debugger will show the source code line where execution is paused.</li>
+<li>Open Disassembly View: Use the commands by pressing commands <code>Ctrl+Shift+P</code> and typing <strong>Open Disassembly View</strong> to open the Disassembly View. Or you can find this by right-click on a function in the call stack and select &ldquo;Open Disassembly View&rdquo;.</li>
+</ul>
+<ol start="3">
+<li>Analyze Corresponding Instructions</li>
+</ol>
+<ul>
+<li>Step Through the Code: Use stepping commands (like Step Over or Step Into) to advance the execution line by line.</li>
+<li>Observe Changes: As you step through the source code, observe the corresponding assembly instructions in the Disassembly View.</li>
+</ul>
+<h2 id="memory-view">Memory View<a class="td-heading-self-link" href="#memory-view" aria-label="Heading self-link"></a></h2>
+<p><strong>Memory View</strong> displays the raw data stored at specific memory addresses in the system.</p>
+<p><img src="/images/debug/debug-14.png" alt=""></p>
+<p>In this example, <code>44443444</code> is the hexadecimal representation stored at the memory address <code>0x40011004</code>. <code>44</code> is the least significant byte, followed by <code>44</code>, then <code>34</code>, and <code>44</code> again. When reinterpreted in little-endian format, this becomes <code>0x00007683</code>, matching the value shown in the Peripheral View.</p>
+<h2 id="rtos-view">RTOS View<a class="td-heading-self-link" href="#rtos-view" aria-label="Heading self-link"></a></h2>
+<p>The RTOS View provides a comprehensive interface for monitoring and managing Real-Time Operating System (RTOS) tasks and resources within your application.</p>
+<ul>
+<li>Task monitoring: This view display list of all tasks currently running in the system. Each task is shown with important details, including:
+<ul>
+<li>Task name: The identifier for the task</li>
+<li>State: The current status of the task (e.g., running, ready, blocked, suspended)</li>
+<li>Priority: The priority level assigned to the task, influencing its execution order compared to other tasks.</li>
+<li>Stack Usage: Information about the memory consumed by the task&rsquo;s stack, crucial for avoiding stack overflows.
+<img src="/images/debug/debug-16.png" alt=""></li>
+</ul>
+</li>
+<li>Heap: Displays information about dynamic memory allocation, including total size, used memory, and available space.</li>
+</ul>
+<p><img src="/images/debug/debug-17.png" alt=""></p>
+<ul>
+<li>Queue: Shows the status of message queues used for inter-task communication. It indicates the current and maximum length of queues, item sizes, and waiting tasks, facilitating efficient data exchange between tasks.</li>
+</ul>
+<p><img src="/images/debug/debug-18.png" alt=""></p>
+<ul>
+<li>Semaphore: Displays information about semaphores used for synchronization and resource management. It indicates the current value, type (binary, counting, mutex, or recursive mutex), and waiting tasks, helping to prevent race conditions and ensure safe access to shared resources.</li>
+</ul>
+<p><img src="/images/debug/debug-19.png" alt=""></p>
+
+	<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024&ndash;2025
+    <span class="td-footer__authors">SoC.one Inc. |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
