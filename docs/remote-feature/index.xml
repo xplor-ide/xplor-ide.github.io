@@ -7,5 +7,19 @@
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/docs/remote-feature/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XploR Labs</title>
+      <link>http://localhost:1313/docs/remote-feature/xplor-labs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/remote-feature/xplor-labs/</guid>
+      <description>&lt;p&gt;XploR Labs is an extension that enables users to connect to their cloud workspaces and access them remotely from a local machine.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Step to connect:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Click to &lt;strong&gt;XploR Labs&lt;/strong&gt; icon in the &lt;strong&gt;Activity Bar&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/remote-feature/remote-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Select the login button and enter the cloud server URL. (The IDE supports all cloud systems based on Coder Server.)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/remote-feature/remote-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;The IDE will open a browser to retrieve a session token for authentication. Copy the token and paste it into the IDE.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;!-- ![](/images/remote-feature/remote-3.png) --&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/remote-feature/remote-4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Open Remote SSH Connection</title>
+      <link>http://localhost:1313/docs/remote-feature/open-remote-ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/remote-feature/open-remote-ssh/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;XploR Eos IDE&lt;/strong&gt; makes it easy to connect to a remote machine via SSH and work seamlessly as if you were on your local machine. Here&amp;rsquo;s how to get started:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Open a Remote Window:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Click on the &lt;strong&gt;Open a Remote Window&lt;/strong&gt; button located at the bottom-left corner of the IDE. From the menu, select &lt;strong&gt;Connect Current Window to Host&amp;hellip;.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/remote-feature/xplor-labs-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Enter Your Remote Connection Details:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;A dialog will appear where you can input the necessary information to connect to your remote machine:&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

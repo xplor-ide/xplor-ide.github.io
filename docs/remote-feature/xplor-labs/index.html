@@ -1,0 +1,377 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>XploR Labs | XploR Eos IDE</title>
+<meta name="description" content="Connecting to the Cloud from the IDE">
+<meta property="og:url" content="http://localhost:1313/docs/remote-feature/xplor-labs/">
+  <meta property="og:site_name" content="XploR Eos IDE">
+  <meta property="og:title" content="XploR Labs">
+  <meta property="og:description" content="Connecting to the Cloud from the IDE">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2025-01-25T22:54:36+07:00">
+
+  <meta itemprop="name" content="XploR Labs">
+  <meta itemprop="description" content="Connecting to the Cloud from the IDE">
+  <meta itemprop="dateModified" content="2025-01-25T22:54:36+07:00">
+  <meta itemprop="wordCount" content="200">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="XploR Labs">
+  <meta name="twitter:description" content="Connecting to the Cloud from the IDE">
+<link href="/scss/main.css" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="9.03cm" height="9.03cm" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256"><defs><style>.cls-1{fill:url(#linear-gradient-4);filter:url(#drop-shadow-4)}.cls-2{fill:url(#linear-gradient-3);filter:url(#drop-shadow-3)}.cls-3{fill:url(#linear-gradient);filter:url(#drop-shadow-1)}.cls-4{fill:url(#linear-gradient-2);filter:url(#drop-shadow-2)}</style><linearGradient id="linear-gradient" x1="160.27" y1="185.15" x2="245.71" y2="185.15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8c52ff"/><stop offset=".24" stop-color="#a853d5"/><stop offset="1" stop-color="#ff5757"/></linearGradient><filter id="drop-shadow-1" x="147.99" y="126.04" width="115.68" height="123.84" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-2" x1="100.72" y1="124.74" x2="228.62" y2="124.74" xlink:href="#linear-gradient"/><filter id="drop-shadow-2" x="88.47" y="11.8" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-2" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-2" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-3" x1="10.29" y1="70.85" x2="95.73" y2="70.85" xlink:href="#linear-gradient"/><filter id="drop-shadow-3" x="-2.01" y="11.8" width="115.68" height="123.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-3" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-3" operator="in"/><feComposite in="SourceGraphic"/></filter><linearGradient id="linear-gradient-4" x1="27.38" y1="131.26" x2="155.28" y2="131.26" xlink:href="#linear-gradient"/><filter id="drop-shadow-4" x="15.03" y="18.28" width="158.16" height="231.6" filterUnits="userSpaceOnUse"><feOffset dx="2.83" dy="2.83"/><feGaussianBlur result="blur-4" stdDeviation="5"/><feFlood flood-color="#000" flood-opacity="1"/><feComposite in2="blur-4" operator="in"/><feComposite in="SourceGraphic"/></filter></defs><path class="cls-3" d="M167.42 138.44c21.73 16.26 63.84 47.73 65.11 48.68 33.21 24.82-4.6 41.4-23.01 44.38-8.43 1.38-18.52-1.28-29.08-6.17-21.46-23.92-25.79-53.73-13.03-86.89z"/><path class="cls-4" d="M157.44 45.54c29.15-23.12 60.59-31.36 70.45-5.1 7.97 21.21-51.39 74.35-60.47 98-12.76 33.16-8.43 62.98 13.03 86.89-23.04-10.68-48.22-32.1-62.91-45.49-39.63-36.3-2.24-100.87 39.9-134.3z"/><path class="cls-2" d="M88.58 117.56C66.85 101.3 24.74 69.83 23.47 68.88c-33.21-24.82 4.6-41.4 23.01-44.38 8.43-1.38 18.52 1.28 29.08 6.17 21.46 23.92 25.79 53.73 13.03 86.89z"/><path class="cls-1" d="M98.56 210.46c-29.15 23.12-60.59 31.36-70.45 5.1-7.97-21.21 51.39-74.35 60.47-98 12.76-33.16 8.43-62.98-13.03-86.89 23.04 10.68 48.22 32.1 62.91 45.49 39.63 36.3 2.24 100.87-39.9 134.3z"/></svg></span><span class="navbar-brand__name">XploR Eos IDE</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/"><span>Documentation</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsoverview-li">
+  <input type="checkbox" id="m-docsoverview-check"/>
+  <label for="m-docsoverview-check"><a href="/docs/overview/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsoverview"><span class="">Overview</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewinstallation-li">
+  <input type="checkbox" id="m-docsoverviewinstallation-check"/>
+  <label for="m-docsoverviewinstallation-check"><a href="/docs/overview/installation/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewinstallation"><span class="">Installation</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverviewsystem-requirement-li">
+  <input type="checkbox" id="m-docsoverviewsystem-requirement-check"/>
+  <label for="m-docsoverviewsystem-requirement-check"><a href="/docs/overview/system-requirement/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsoverviewsystem-requirement"><span class="">System Requirements</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgetting-started-li">
+  <input type="checkbox" id="m-docsgetting-started-check"/>
+  <label for="m-docsgetting-started-check"><a href="/docs/getting-started/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting started</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-freertos-li">
+  <input type="checkbox" id="m-docsgetting-startedhelloworld-freertos-check"/>
+  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="">Creating and debugging a FreeRTOS application</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-de2115-baremetal-li">
+  <input type="checkbox" id="m-docsgetting-startedhelloworld-de2115-baremetal-check"/>
+  <label for="m-docsgetting-startedhelloworld-de2115-baremetal-check"><a href="/docs/getting-started/helloworld-de2115-baremetal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-de2115-baremetal"><span class="">Creating and debugging a baremetal application on DE2-115 FPGA</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgeneral-ide-li">
+  <input type="checkbox" id="m-docsgeneral-ide-check"/>
+  <label for="m-docsgeneral-ide-check"><a href="/docs/general-ide/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsgeneral-ide"><span class="">General IDE</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsproject-n-build-li">
+  <input type="checkbox" id="m-docsproject-n-build-check"/>
+  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Projects and Build</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-buildmanaging_projects-li">
+  <input type="checkbox" id="m-docsproject-n-buildmanaging_projects-check"/>
+  <label for="m-docsproject-n-buildmanaging_projects-check"><a href="/docs/project-n-build/managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-buildmanaging_projects"><span class="">Managing Projects</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-buildbuilding_projects-li">
+  <input type="checkbox" id="m-docsproject-n-buildbuilding_projects-check"/>
+  <label for="m-docsproject-n-buildbuilding_projects-check"><a href="/docs/project-n-build/building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-buildbuilding_projects"><span class="">Building Projects</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdebug-li">
+  <input type="checkbox" id="m-docsdebug-check"/>
+  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug_projects-li">
+  <input type="checkbox" id="m-docsdebugdebug_projects-check"/>
+  <label for="m-docsdebugdebug_projects-check"><a href="/docs/debug/debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug_projects"><span class="">Launching a Debug Session</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-application-li">
+  <input type="checkbox" id="m-docsdebugdebug-application-check"/>
+  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="">Debugging the Application</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-configuration-li">
+  <input type="checkbox" id="m-docsdebugdebug-configuration-check"/>
+  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="">Debug Configuration</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demo-li">
+  <input type="checkbox" id="m-docsexample-demo-check"/>
+  <label for="m-docsexample-demo-check"><a href="/docs/example-demo/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demo"><span class="">Example Demo</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demobaremetal-li">
+  <input type="checkbox" id="m-docsexample-demobaremetal-check"/>
+  <label for="m-docsexample-demobaremetal-check"><a href="/docs/example-demo/baremetal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demobaremetal"><span class="">Baremetal Example</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalgnu-c-cpp-helloworld-check"><a href="/docs/example-demo/baremetal/gnu-c-cpp-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalgnu-c-cpp-helloworld"><span class="">GNU C/C&#43;&#43; Helloworld</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demobaremetalllvm-helloworld-li">
+  <input type="checkbox" id="m-docsexample-demobaremetalllvm-helloworld-check"/>
+  <label for="m-docsexample-demobaremetalllvm-helloworld-check"><a href="/docs/example-demo/baremetal/llvm-helloworld/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demobaremetalllvm-helloworld"><span class="">LLVM Helloworld</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demofreertos-li">
+  <input type="checkbox" id="m-docsexample-demofreertos-check"/>
+  <label for="m-docsexample-demofreertos-check"><a href="/docs/example-demo/freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demofreertos"><span class="">FreeRTOS Example</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demofreertosfreertos-qemu-example-li">
+  <input type="checkbox" id="m-docsexample-demofreertosfreertos-qemu-example-check"/>
+  <label for="m-docsexample-demofreertosfreertos-qemu-example-check"><a href="/docs/example-demo/freertos/freertos-qemu-example/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demofreertosfreertos-qemu-example"><span class="">FreeRTOS QEMU</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsfpgas-li">
+  <input type="checkbox" id="m-docsfpgas-check"/>
+  <label for="m-docsfpgas-check"><a href="/docs/fpgas/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfpgas"><span class="">FPGAs</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfpgasbitfile-programming-li">
+  <input type="checkbox" id="m-docsfpgasbitfile-programming-check"/>
+  <label for="m-docsfpgasbitfile-programming-check"><a href="/docs/fpgas/bitfile-programming/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsfpgasbitfile-programming"><span class="">Bitfile Programming</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsremote-feature-li">
+  <input type="checkbox" id="m-docsremote-feature-check" checked/>
+  <label for="m-docsremote-feature-check"><a href="/docs/remote-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsremote-feature"><span class="">Remote Feature</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsremote-featurexplor-labs-li">
+  <input type="checkbox" id="m-docsremote-featurexplor-labs-check" checked/>
+  <label for="m-docsremote-featurexplor-labs-check"><a href="/docs/remote-feature/xplor-labs/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsremote-featurexplor-labs"><span class="td-sidebar-nav-active-item">XploR Labs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-featureopen-remote-ssh-li">
+  <input type="checkbox" id="m-docsremote-featureopen-remote-ssh-check"/>
+  <label for="m-docsremote-featureopen-remote-ssh-check"><a href="/docs/remote-feature/open-remote-ssh/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsremote-featureopen-remote-ssh"><span class="">Open Remote SSH Connection</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommon-issue-li">
+  <input type="checkbox" id="m-docscommon-issue-check"/>
+  <label for="m-docscommon-issue-check"><a href="/docs/common-issue/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docscommon-issue"><span class="">Common Issues and Solutions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docshardware-environment-li">
+  <input type="checkbox" id="m-docshardware-environment-check"/>
+  <label for="m-docshardware-environment-check"><a href="/docs/hardware-environment/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docshardware-environment"><span class=""></span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#remote-connection-to-workspace">Remote connection to Workspace</a></li>
+    <li><a href="#other-features-of-xplor-labs">Other features of XploR Labs</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/remote-feature/">Remote Feature</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    XploR Labs</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>XploR Labs</h1>
+	<div class="lead">Connecting to the Cloud from the IDE</div>
+	<header class="article-meta">
+		
+  </header>
+	<p>XploR Labs is an extension that enables users to connect to their cloud workspaces and access them remotely from a local machine.</p>
+<p><strong>Step to connect:</strong></p>
+<ol>
+<li>Click to <strong>XploR Labs</strong> icon in the <strong>Activity Bar</strong>.</li>
+</ol>
+<p><img src="/images/remote-feature/remote-1.png" alt=""></p>
+<ol start="2">
+<li>Select the login button and enter the cloud server URL. (The IDE supports all cloud systems based on Coder Server.)</li>
+</ol>
+<p><img src="/images/remote-feature/remote-2.png" alt=""></p>
+<ol start="3">
+<li>The IDE will open a browser to retrieve a session token for authentication. Copy the token and paste it into the IDE.</li>
+</ol>
+<!-- ![](/images/remote-feature/remote-3.png) -->
+<p><img src="/images/remote-feature/remote-4.png" alt=""></p>
+<ol start="4">
+<li>Once logged in, all workspaces will be displayed in the <strong>XploR Labs View</strong>.</li>
+</ol>
+<p><img src="/images/remote-feature/remote-5.png" alt=""></p>
+<h2 id="remote-connection-to-workspace">Remote connection to Workspace<a class="td-heading-self-link" href="#remote-connection-to-workspace" aria-label="Heading self-link"></a></h2>
+<p>To connect to a cloud workspace, click the <strong>Open Workspace</strong> button in the tree view or the <strong>Open Workspace</strong> button in the bottom-right corner.</p>
+<p><img src="/images/remote-feature/remote-6.png" alt=""></p>
+<p>The IDE will connect to the cloud, set up the environment, and open a new window with remote access to your cloud workspace.</p>
+<p><img src="/images/remote-feature/remote-7.png" alt=""></p>
+<h2 id="other-features-of-xplor-labs">Other features of XploR Labs<a class="td-heading-self-link" href="#other-features-of-xplor-labs" aria-label="Heading self-link"></a></h2>
+<p>In Workspace treeview, you manage your workspace with buttons:</p>
+<p><img src="/images/remote-feature/remote-8.png" alt=""></p>
+<ul>
+<li><strong>Edit Workspace Settings</strong>: Open your workspace&rsquo;s settings in the browser.</li>
+<li><strong>Navigate to Workspace Page</strong>: Open your workspace&rsquo;s homepage in the browser.</li>
+<li><strong>Update Workspace</strong>: Refresh the workspace tree in XploR Labs treeview. If there are any changes (add or remove your workspaces), the tree will be updated.</li>
+</ul>
+
+	<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/xplor-ide/xplor-ide.github.io/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/xplor-ide/xplor-ide.github.io/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof gtag !== 'function') return;
+    gtag('event', 'page_helpful', {
+      'event_category': 'Helpful',
+      'event_label': window.location.pathname,
+      'value': value
+    });
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback( 100 );
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+<br />
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024&ndash;2025
+    <span class="td-footer__authors">SoC.one Inc. |</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span><span class="ms-2"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.js"></script>
+<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

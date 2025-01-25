@@ -12,27 +12,33 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Debug Configuration | XploR Eos IDE</title>
-<meta name="description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+<meta name="description" content="A debug configuration is a set of properties defined in a launch.json file. It specifies how the debugger interacts with the program being debugged and includes the necessary parameters for a debugging session.
+The IDE typically generates a default launch.json file automatically when a project is created using our template. the launch.json file is saved in the .theia folder within your workspace directory.
+You can easily access the launch.json file by clicking the Open launch.json button in the Debug View.">
 <meta property="og:url" content="http://localhost:1313/docs/debug/debug-configuration/">
   <meta property="og:site_name" content="XploR Eos IDE">
   <meta property="og:title" content="Debug Configuration">
-  <meta property="og:description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+  <meta property="og:description" content="A debug configuration is a set of properties defined in a launch.json file. It specifies how the debugger interacts with the program being debugged and includes the necessary parameters for a debugging session.
+The IDE typically generates a default launch.json file automatically when a project is created using our template. the launch.json file is saved in the .theia folder within your workspace directory.
+You can easily access the launch.json file by clicking the Open launch.json button in the Debug View.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
     <meta property="article:published_time" content="2024-10-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-01-17T15:08:41+07:00">
-    <meta property="article:tag" content="Debug">
+    <meta property="article:modified_time" content="2025-01-25T22:54:36+07:00">
 
   <meta itemprop="name" content="Debug Configuration">
-  <meta itemprop="description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+  <meta itemprop="description" content="A debug configuration is a set of properties defined in a launch.json file. It specifies how the debugger interacts with the program being debugged and includes the necessary parameters for a debugging session.
+The IDE typically generates a default launch.json file automatically when a project is created using our template. the launch.json file is saved in the .theia folder within your workspace directory.
+You can easily access the launch.json file by clicking the Open launch.json button in the Debug View.">
   <meta itemprop="datePublished" content="2024-10-14T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-01-17T15:08:41+07:00">
-  <meta itemprop="wordCount" content="1424">
-  <meta itemprop="keywords" content="Debug">
+  <meta itemprop="dateModified" content="2025-01-25T22:54:36+07:00">
+  <meta itemprop="wordCount" content="1780">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Debug Configuration">
-  <meta name="twitter:description" content="A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names launch.json within .theia folder in your workspace.">
+  <meta name="twitter:description" content="A debug configuration is a set of properties defined in a launch.json file. It specifies how the debugger interacts with the program being debugged and includes the necessary parameters for a debugging session.
+The IDE typically generates a default launch.json file automatically when a project is created using our template. the launch.json file is saved in the .theia folder within your workspace directory.
+You can easily access the launch.json file by clicking the Open launch.json button in the Debug View.">
 <link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -101,7 +107,11 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-freertos-li">
   <input type="checkbox" id="m-docsgetting-startedhelloworld-freertos-check"/>
-  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="">Creating application with FreeRTOS</span></a></label>
+  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="">Creating and debugging a FreeRTOS application</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-de2115-baremetal-li">
+  <input type="checkbox" id="m-docsgetting-startedhelloworld-de2115-baremetal-check"/>
+  <label for="m-docsgetting-startedhelloworld-de2115-baremetal-check"><a href="/docs/getting-started/helloworld-de2115-baremetal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-de2115-baremetal"><span class="">Creating and debugging a baremetal application on DE2-115 FPGA</span></a></label>
   
 </li>
   </ul>
@@ -111,39 +121,35 @@
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsproject-n-build-li">
   <input type="checkbox" id="m-docsproject-n-build-check"/>
-  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Build and Quick Debug Projects</span></a></label>
+  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Projects and Build</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build51_managing_projects-li">
-  <input type="checkbox" id="m-docsproject-n-build51_managing_projects-check"/>
-  <label for="m-docsproject-n-build51_managing_projects-check"><a href="/docs/project-n-build/5.1_managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build51_managing_projects"><span class="">Managing Projects</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-buildmanaging_projects-li">
+  <input type="checkbox" id="m-docsproject-n-buildmanaging_projects-check"/>
+  <label for="m-docsproject-n-buildmanaging_projects-check"><a href="/docs/project-n-build/managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-buildmanaging_projects"><span class="">Managing Projects</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build52_building_projects-li">
-  <input type="checkbox" id="m-docsproject-n-build52_building_projects-check"/>
-  <label for="m-docsproject-n-build52_building_projects-check"><a href="/docs/project-n-build/5.2_building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build52_building_projects"><span class="">Building Projects</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build53_debug_projects-li">
-  <input type="checkbox" id="m-docsproject-n-build53_debug_projects-check"/>
-  <label for="m-docsproject-n-build53_debug_projects-check"><a href="/docs/project-n-build/5.3_debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build53_debug_projects"><span class="">Debug Projects</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-buildbuilding_projects-li">
+  <input type="checkbox" id="m-docsproject-n-buildbuilding_projects-check"/>
+  <label for="m-docsproject-n-buildbuilding_projects-check"><a href="/docs/project-n-build/building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-buildbuilding_projects"><span class="">Building Projects</span></a></label>
   
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdebug-li">
   <input type="checkbox" id="m-docsdebug-check" checked/>
-  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug Project</span></a></label>
+  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdebugdebug-configuration-li">
-  <input type="checkbox" id="m-docsdebugdebug-configuration-check" checked/>
-  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="td-sidebar-nav-active-item">Debug Configuration</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug_projects-li">
+  <input type="checkbox" id="m-docsdebugdebug_projects-check"/>
+  <label for="m-docsdebugdebug_projects-check"><a href="/docs/debug/debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug_projects"><span class="">Launching a Debug Session</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-application-li">
   <input type="checkbox" id="m-docsdebugdebug-application-check"/>
-  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="">Debug Application</span></a></label>
+  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="">Debugging the Application</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugadvanced-debug-li">
-  <input type="checkbox" id="m-docsdebugadvanced-debug-check"/>
-  <label for="m-docsdebugadvanced-debug-check"><a href="/docs/debug/advanced-debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugadvanced-debug"><span class="">Advanced Debug</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdebugdebug-configuration-li">
+  <input type="checkbox" id="m-docsdebugdebug-configuration-check" checked/>
+  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="td-sidebar-nav-active-item">Debug Configuration</span></a></label>
   
 </li>
   </ul>
@@ -167,15 +173,52 @@
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demofreertos-li">
+  <input type="checkbox" id="m-docsexample-demofreertos-check"/>
+  <label for="m-docsexample-demofreertos-check"><a href="/docs/example-demo/freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demofreertos"><span class="">FreeRTOS Example</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demofreertosfreertos-qemu-example-li">
+  <input type="checkbox" id="m-docsexample-demofreertosfreertos-qemu-example-check"/>
+  <label for="m-docsexample-demofreertosfreertos-qemu-example-check"><a href="/docs/example-demo/freertos/freertos-qemu-example/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demofreertosfreertos-qemu-example"><span class="">FreeRTOS QEMU</span></a></label>
+  
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-feature-li">
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsfpgas-li">
+  <input type="checkbox" id="m-docsfpgas-check"/>
+  <label for="m-docsfpgas-check"><a href="/docs/fpgas/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfpgas"><span class="">FPGAs</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfpgasbitfile-programming-li">
+  <input type="checkbox" id="m-docsfpgasbitfile-programming-check"/>
+  <label for="m-docsfpgasbitfile-programming-check"><a href="/docs/fpgas/bitfile-programming/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsfpgasbitfile-programming"><span class="">Bitfile Programming</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsremote-feature-li">
   <input type="checkbox" id="m-docsremote-feature-check"/>
   <label for="m-docsremote-feature-check"><a href="/docs/remote-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsremote-feature"><span class="">Remote Feature</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfaq-li">
-  <input type="checkbox" id="m-docsfaq-check"/>
-  <label for="m-docsfaq-check"><a href="/docs/faq/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfaq"><span class="">Frequently Asked Questions</span></a></label>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-featurexplor-labs-li">
+  <input type="checkbox" id="m-docsremote-featurexplor-labs-check"/>
+  <label for="m-docsremote-featurexplor-labs-check"><a href="/docs/remote-feature/xplor-labs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsremote-featurexplor-labs"><span class="">XploR Labs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-featureopen-remote-ssh-li">
+  <input type="checkbox" id="m-docsremote-featureopen-remote-ssh-check"/>
+  <label for="m-docsremote-featureopen-remote-ssh-check"><a href="/docs/remote-feature/open-remote-ssh/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsremote-featureopen-remote-ssh"><span class="">Open Remote SSH Connection</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommon-issue-li">
+  <input type="checkbox" id="m-docscommon-issue-check"/>
+  <label for="m-docscommon-issue-check"><a href="/docs/common-issue/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docscommon-issue"><span class="">Common Issues and Solutions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docshardware-environment-li">
+  <input type="checkbox" id="m-docshardware-environment-check"/>
+  <label for="m-docshardware-environment-check"><a href="/docs/hardware-environment/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docshardware-environment"><span class=""></span></a></label>
   
 </li>
   </ul>
@@ -191,32 +234,7 @@
 </div>
 
             
-            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
-      <h5 class="taxonomy-title">Tag Cloud</h5>
-      <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bare-metal/" data-taxonomy-term="bare-metal"><span class="taxonomy-label">Bare-Metal</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bitfile/" data-taxonomy-term="bitfile"><span class="taxonomy-label">Bitfile</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span><span class="taxonomy-count">4</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/docs/" data-taxonomy-term="docs"><span class="taxonomy-label">Docs</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/electron/" data-taxonomy-term="electron"><span class="taxonomy-label">Electron</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/freertos/" data-taxonomy-term="freertos"><span class="taxonomy-label">Freertos</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/hardware/" data-taxonomy-term="hardware"><span class="taxonomy-label">Hardware</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/installation/" data-taxonomy-term="installation"><span class="taxonomy-label">Installation</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/launch-configuration/" data-taxonomy-term="launch-configuration"><span class="taxonomy-label">Launch Configuration</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/linux/" data-taxonomy-term="linux"><span class="taxonomy-label">Linux</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/qemu/" data-taxonomy-term="qemu"><span class="taxonomy-label">QEMU</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/sample/" data-taxonomy-term="sample"><span class="taxonomy-label">Sample</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/test/" data-taxonomy-term="test"><span class="taxonomy-label">Test</span><span class="taxonomy-count">9</span></a></li>
-        </ul>
-    </div>
-  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
-      <h5 class="taxonomy-title">Categories</h5>
-      <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/examples/" data-taxonomy-term="examples"><span class="taxonomy-label">Examples</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/placeholders/" data-taxonomy-term="placeholders"><span class="taxonomy-label">Placeholders</span><span class="taxonomy-count">6</span></a></li>
-        </ul>
-    </div>
-  
+            
 	
           </aside>
           <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
@@ -228,7 +246,7 @@
   <li class="breadcrumb-item">
     <a href="/docs/">Documentation</a></li>
   <li class="breadcrumb-item">
-    <a href="/docs/debug/">Debug Project</a></li>
+    <a href="/docs/debug/">Debug</a></li>
   <li class="breadcrumb-item active" aria-current="page">
     Debug Configuration</li>
   </ol>
@@ -238,21 +256,113 @@
 	<h1>Debug Configuration</h1>
 	
 	<header class="article-meta">
-		<div class="taxonomy taxonomy-terms-article taxo-tags">
-  <h5 class="taxonomy-title">Tags:</h5>
-  <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span></a></li>
-    </ul>
-</div>
-
+		
   </header>
-	<p>A debug configuration is usually defined in a launch.json file, which specifies how the debugger connects to the program being debugged, along with any specific parameters or conditions for the debug session. The file is typically auto-generated but can be manually modified for more complex debugging scenarios, such as loading symbols only or configuring multiple launch tasks. This configuration is usually generated automatically by the IDE and saved in a JSON file names <code>launch.json</code> within <code>.theia</code> folder in your workspace.</p>
-<p><img src="/images/debug/debug-1.png" alt=""></p>
+	<p>A debug configuration is a set of properties defined in a launch.json file. It specifies how the debugger interacts with the program being debugged and includes the necessary parameters for a debugging session.</p>
+<p>The IDE typically generates a default <code>launch.json</code> file automatically when a project is created using our template. the <code>launch.json</code> file is saved in the <code>.theia</code> folder within your workspace directory.</p>
 <p>You can easily access the <code>launch.json</code> file by clicking the <strong>Open launch.json</strong> button in the Debug View.</p>
 <p><img src="/images/debug/debug-20.png" alt=""></p>
-<p>There are many <code>User/Workspace Settings</code> to control things globally. You can find these in the <a href="https://code.visualstudio.com/docs/editor/debugging#_launch-configurations">VS Code Launch configurations</a>. <code>launch.json</code> can override some of those settings. There is a lot of functionality that is available via <code>Settings</code> and some may be useful in a team environment and/or can be used across all cortex-debug sessions</p>
-<p>The following attributes (properties) can be used in your <code>launch.json</code> to control various aspects of debugging. Also <code>IntelliSense</code> is an invaluable aid while editing <code>launch.json</code>. With <code>IntelliSense</code>, you can hover over an attribute to get more information and/or help you find attributes (just start typing a double-quote, use Tab key) and provide defaults/options.</p>
-<p>If the type is marked as <code>{...}</code> it means that it is a complex item can have multiple types. Possibly consult our Wiki</p>
+<p>A Debug Adapter is a bridge between the IDE and a debugger (e.g., GDB, LLDB). It uses the Debug Adapter Protocol (DAP) to standardize communication, enabling features like breakpoints, stepping, and variable inspection across different languages and tools. It simplifies debugging by providing a consistent interface for IDEs to interact with various debuggers.</p>
+<p>We utilize <strong>xplor-debug</strong> as a key tool for debugging embedded systems. This tool is adapted from <strong>cortex-debug</strong>, inheriting its core strengths.</p>
+<p>Here is the launch configuration generated for <strong>xplor-debug</strong>:
+<img src="/images/debug/debug-1.png" alt=""></p>
+<p>The following attributes are required for each launch configuration:</p>
+<ul>
+<li><strong>type</strong>: Specifies the debugger to be used for the configuration. The <code>xplor-debug</code> is the only built-in adapter, but each installed debug extension may introduce its own type.</li>
+<li><strong>request</strong>: Defines the action for the configuration, with options currently including <code>launch</code> and <code>attach</code> (support later).</li>
+<li><strong>name</strong>: A descriptive, user-friendly name that will appear in the Debug launch configuration dropdown.</li>
+</ul>
+<p>In addition to the mandatory attributes, the following parameters can be used in the <code>launch.json</code> file to further customize the debugging setup:</p>
+<ul>
+<li><strong>servertype</strong>: Specifies the type of server to be used for the debug session. This can be one of the following:
+<ul>
+<li>
+<p><code>qemu</code>: Use the QEMU emulator for debugging embedded systems.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;cwd&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;executable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/Debug/main.elf&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Baremetal Debugging with QEMU: 32-bit&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;launch&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;xplor-debug&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;runToEntryPoint&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;main&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;showDevDebugOutput&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;none&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;serverpath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/.xplor/rv-qemu/bin/qemu-system-riscv32&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;servertype&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;qemu&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;machine&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;virt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;cpu&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;any&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;serverArgs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;-bios&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;none&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;gdbPath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/.xplor/rv-xplor-elf/bin/riscv-xplor-elf-gdb&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;postLaunchCommands&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;monitor reset halt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;load&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p><code>serverpath, machine, serverArgs</code> are required for the <code>qemu</code> servertype.</p>
+</li>
+<li>
+<p><code>linux</code>: Indicates that the target system is a Linux-based environment</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;cwd&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;executable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/Debug/main.elf&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Linux Debugging with QEMU - ARCH: 64-bit float&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;launch&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;xplor-debug&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;runToEntryPoint&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;main&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;showDevDebugOutput&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;none&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;serverpath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ssh&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;servertype&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;linux&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;machine&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;virt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;cpu&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;any&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;serverArgs&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;-bios&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;none&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;gdbPath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/.xplor/rv64gc-xplor-linux/sysroots/x86_64-xplordsdk-linux/usr/bin/riscv64-xplord-linux-musl/riscv64-xplord-linux-musl-gdb&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;ipAddr&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;localhost&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;gdbPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1240</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;sshPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2222</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;preLaunchTask&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Prepare: Executable (64-bit float)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p><code>openocd</code>: Use OpenOCD (Open On-Chip Debugger) for debugging embedded devices over JTAG interface.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;executable&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/Debug/main.elf&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Debug with OpenOCD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;request&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;launch&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;xplor-debug&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;servertype&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;openocd&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;configFiles&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;${workspaceFolder}/.xplor/de2115-neorv32-bit/de2-115.cfg&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;runToEntryPoint&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;main&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;gdbPort&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">3333</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;showDevDebugOutput&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;vscode&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;serverpath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/.xplor/openocd/bin/openocd&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;svdFilePath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/neorv32.xml&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;gdbPath&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;${workspaceFolder}/.xplor/rv-xplor-elf/bin/riscv-xplor-elf-gdb&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;postLaunchCommands&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;monitor reset halt&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;load&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;p/x $pc=main&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p><code>serverpath, configFiles</code> are required for the <code>openocd</code> server type.</p>
+<!-- Below are a few examples of how **serverType** might be configured for different templates:
+- **freertos-virt-qemu-blinky-example**: This template simulates a FreeRTOS-based application running on a virtual QEMU target. The appropriate server type for this case would be: `"serverType": "qemu"`
+- **linux-helloworld-example**: For this example, the target system is based on Linux, so you would use the following configuration: `"serverType": "linux"`
+- **baremetal-neorv32-de2115-helloworld-example**: This is a baremetal example for the NEORV32 processor on the DE2115 bopard. Since this is a hardware-based target with no underlying operating system, it would be configured as: `"serverType": "openocd"` -->
+</li>
+</ul>
+</li>
+<li><strong>executable</strong>: Defines the path to the executable file or firmware that should be debugged. This is typically the binary or ELF file generated by the build process that contains the program code for the embedded system.</li>
+<li><strong>gdbPath</strong>: Specifies the path to the GDB (GNU Debugger) executable. This is particularly important if you need to use a specific version of GDB for the debugging session or if the default path is not set correctly.</li>
+<li><strong>svdFilePath</strong>: Specifies the path to the System View Description (SVD) file, which provides details about the target’s registers and peripherals. This is especially useful for debugging ARM-based or RISCV-based systems, as it allows the debugger to map registers and peripherals in the debugger interface.</li>
+</ul>
+<p>Here is a list of parameters in <code>launch.json</code>. Configure them for your specific device and environment.</p>
 <table>
   <thead>
       <tr>
@@ -569,10 +679,10 @@
 <button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
 <button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
 <p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+  Glad to hear it! Please <a href="https://github.com/xplor-ide/xplor-ide.github.io/issues/new">tell us how we can improve</a>.
 </p>
 <p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+  Sorry to hear that. Please <a href="https://github.com/xplor-ide/xplor-ide.github.io/issues/new">tell us how we can improve</a>.
 </p>
 </div>
 <script>

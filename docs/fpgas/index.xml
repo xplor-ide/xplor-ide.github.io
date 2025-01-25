@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FPGAs on XploR Eos IDE</title>
+    <link>http://localhost:1313/docs/fpgas/</link>
+    <description>Recent content in FPGAs on XploR Eos IDE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 25 Jan 2025 22:54:36 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/docs/fpgas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bitfile Programming</title>
+      <link>http://localhost:1313/docs/fpgas/bitfile-programming/</link>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/fpgas/bitfile-programming/</guid>
+      <description>&lt;h2 id=&#34;bitfile-programming&#34;&gt;Bitfile Programming&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#bitfile-programming&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;This feature allows you to detect the connected FPGA board, core, vendor, bitfile. It streamlines the process of programming an FPGA device by automating the detection of necessary components and providing a user-friendly interface for initating programming operations.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. FPGA Setup&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before proceeding, ensure that all required components (e.g., &lt;code&gt;baremetal-neorv32-de2115-helloworld-example&lt;/code&gt;) and drivers for your FPGA board and JTAG cable are installed correctly. This includes drivers for the JTAG interface and any FPGA-specific toolchains such as Quartus or Vivado.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

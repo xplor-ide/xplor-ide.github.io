@@ -8,11 +8,18 @@
     <language>en</language>
     <atom:link href="http://localhost:1313/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating application with FreeRTOS</title>
+      <title>Creating and debugging a FreeRTOS application</title>
       <link>http://localhost:1313/docs/getting-started/helloworld-freertos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/docs/getting-started/helloworld-freertos/</guid>
       <description>&lt;p&gt;This project referred to in this chapter is called Blinky. This application prints Blink text. Through the debug session, users can examine RTOS objects such as Task and Queue. The application can also be built and run on QEMU emulator.&lt;/p&gt;&#xA;&lt;p&gt;To build, run and debug Blinky applications with QEMU emulator, please install the &lt;strong&gt;freertos-virt-qemu-blinky-example&lt;/strong&gt; components first.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/getting-started/create-project-0.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Click the &lt;strong&gt;Install Dependencies&lt;/strong&gt; button, select &lt;strong&gt;freertos-virt-qemu-blinky-example&lt;/strong&gt; template and click the &lt;strong&gt;Install&lt;/strong&gt; button.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Creating and debugging a baremetal application on DE2-115 FPGA</title>
+      <link>http://localhost:1313/docs/getting-started/helloworld-de2115-baremetal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/getting-started/helloworld-de2115-baremetal/</guid>
+      <description>&lt;!-- This chapter provides a step-by-step guide to creating a baremetal **Hello World** application, specifically for the DE2-115 FPGA. This involves setting up the project, writing a simple application, building it, and debugging it on the DE2-115 hardware. --&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#prerequisites&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;DE2-115 FPGA board.&lt;/li&gt;&#xA;&lt;li&gt;USB Blaster and UART cable for programming and debugging.&lt;/li&gt;&#xA;&lt;li&gt;Necessary drivers installed for communication with the hardware.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;install-template&#34;&gt;Install template&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#install-template&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Click the &lt;strong&gt;Install Dependencies&lt;/strong&gt; button, select &lt;strong&gt;baremetal-neorv32-de2115-helloworld-example&lt;/strong&gt; template and click the &lt;strong&gt;Install&lt;/strong&gt; button.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

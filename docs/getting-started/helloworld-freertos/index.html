@@ -11,26 +11,23 @@
 
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Creating application with FreeRTOS | XploR Eos IDE</title>
+<title>Creating and debugging a FreeRTOS application | XploR Eos IDE</title>
 <meta name="description" content="This chapter covers the basics of a quick-start project including creating, building, running, and debugging applications.">
 <meta property="og:url" content="http://localhost:1313/docs/getting-started/helloworld-freertos/">
   <meta property="og:site_name" content="XploR Eos IDE">
-  <meta property="og:title" content="Creating application with FreeRTOS">
+  <meta property="og:title" content="Creating and debugging a FreeRTOS application">
   <meta property="og:description" content="This chapter covers the basics of a quick-start project including creating, building, running, and debugging applications.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-01-17T15:09:14+07:00">
-    <meta property="article:tag" content="Freertos">
-    <meta property="article:tag" content="QEMU">
+    <meta property="article:modified_time" content="2025-01-23T15:26:33+07:00">
 
-  <meta itemprop="name" content="Creating application with FreeRTOS">
+  <meta itemprop="name" content="Creating and debugging a FreeRTOS application">
   <meta itemprop="description" content="This chapter covers the basics of a quick-start project including creating, building, running, and debugging applications.">
-  <meta itemprop="dateModified" content="2025-01-17T15:09:14+07:00">
-  <meta itemprop="wordCount" content="247">
-  <meta itemprop="keywords" content="Freertos,QEMU">
+  <meta itemprop="dateModified" content="2025-01-23T15:26:33+07:00">
+  <meta itemprop="wordCount" content="249">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Creating application with FreeRTOS">
+  <meta name="twitter:title" content="Creating and debugging a FreeRTOS application">
   <meta name="twitter:description" content="This chapter covers the basics of a quick-start project including creating, building, running, and debugging applications.">
 <link href="/scss/main.css" rel="stylesheet">
 <script
@@ -100,7 +97,11 @@
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsgetting-startedhelloworld-freertos-li">
   <input type="checkbox" id="m-docsgetting-startedhelloworld-freertos-check" checked/>
-  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="td-sidebar-nav-active-item">Creating application with FreeRTOS</span></a></label>
+  <label for="m-docsgetting-startedhelloworld-freertos-check"><a href="/docs/getting-started/helloworld-freertos/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-freertos"><span class="td-sidebar-nav-active-item">Creating and debugging a FreeRTOS application</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-startedhelloworld-de2115-baremetal-li">
+  <input type="checkbox" id="m-docsgetting-startedhelloworld-de2115-baremetal-check"/>
+  <label for="m-docsgetting-startedhelloworld-de2115-baremetal-check"><a href="/docs/getting-started/helloworld-de2115-baremetal/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsgetting-startedhelloworld-de2115-baremetal"><span class="">Creating and debugging a baremetal application on DE2-115 FPGA</span></a></label>
   
 </li>
   </ul>
@@ -110,39 +111,35 @@
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsproject-n-build-li">
   <input type="checkbox" id="m-docsproject-n-build-check"/>
-  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Build and Quick Debug Projects</span></a></label>
+  <label for="m-docsproject-n-build-check"><a href="/docs/project-n-build/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsproject-n-build"><span class="">Projects and Build</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build51_managing_projects-li">
-  <input type="checkbox" id="m-docsproject-n-build51_managing_projects-check"/>
-  <label for="m-docsproject-n-build51_managing_projects-check"><a href="/docs/project-n-build/5.1_managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build51_managing_projects"><span class="">Managing Projects</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-buildmanaging_projects-li">
+  <input type="checkbox" id="m-docsproject-n-buildmanaging_projects-check"/>
+  <label for="m-docsproject-n-buildmanaging_projects-check"><a href="/docs/project-n-build/managing_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-buildmanaging_projects"><span class="">Managing Projects</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build52_building_projects-li">
-  <input type="checkbox" id="m-docsproject-n-build52_building_projects-check"/>
-  <label for="m-docsproject-n-build52_building_projects-check"><a href="/docs/project-n-build/5.2_building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build52_building_projects"><span class="">Building Projects</span></a></label>
-  
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-build53_debug_projects-li">
-  <input type="checkbox" id="m-docsproject-n-build53_debug_projects-check"/>
-  <label for="m-docsproject-n-build53_debug_projects-check"><a href="/docs/project-n-build/5.3_debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-build53_debug_projects"><span class="">Debug Projects</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsproject-n-buildbuilding_projects-li">
+  <input type="checkbox" id="m-docsproject-n-buildbuilding_projects-check"/>
+  <label for="m-docsproject-n-buildbuilding_projects-check"><a href="/docs/project-n-build/building_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsproject-n-buildbuilding_projects"><span class="">Building Projects</span></a></label>
   
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdebug-li">
   <input type="checkbox" id="m-docsdebug-check"/>
-  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug Project</span></a></label>
+  <label for="m-docsdebug-check"><a href="/docs/debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdebug"><span class="">Debug</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-configuration-li">
-  <input type="checkbox" id="m-docsdebugdebug-configuration-check"/>
-  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="">Debug Configuration</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug_projects-li">
+  <input type="checkbox" id="m-docsdebugdebug_projects-check"/>
+  <label for="m-docsdebugdebug_projects-check"><a href="/docs/debug/debug_projects/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug_projects"><span class="">Launching a Debug Session</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-application-li">
   <input type="checkbox" id="m-docsdebugdebug-application-check"/>
-  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="">Debug Application</span></a></label>
+  <label for="m-docsdebugdebug-application-check"><a href="/docs/debug/debug-application/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-application"><span class="">Debugging the Application</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugadvanced-debug-li">
-  <input type="checkbox" id="m-docsdebugadvanced-debug-check"/>
-  <label for="m-docsdebugadvanced-debug-check"><a href="/docs/debug/advanced-debug/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugadvanced-debug"><span class="">Advanced Debug</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdebugdebug-configuration-li">
+  <input type="checkbox" id="m-docsdebugdebug-configuration-check"/>
+  <label for="m-docsdebugdebug-configuration-check"><a href="/docs/debug/debug-configuration/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdebugdebug-configuration"><span class="">Debug Configuration</span></a></label>
   
 </li>
   </ul>
@@ -166,15 +163,52 @@
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsexample-demofreertos-li">
+  <input type="checkbox" id="m-docsexample-demofreertos-check"/>
+  <label for="m-docsexample-demofreertos-check"><a href="/docs/example-demo/freertos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsexample-demofreertos"><span class="">FreeRTOS Example</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsexample-demofreertosfreertos-qemu-example-li">
+  <input type="checkbox" id="m-docsexample-demofreertosfreertos-qemu-example-check"/>
+  <label for="m-docsexample-demofreertosfreertos-qemu-example-check"><a href="/docs/example-demo/freertos/freertos-qemu-example/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsexample-demofreertosfreertos-qemu-example"><span class="">FreeRTOS QEMU</span></a></label>
+  
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-feature-li">
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsfpgas-li">
+  <input type="checkbox" id="m-docsfpgas-check"/>
+  <label for="m-docsfpgas-check"><a href="/docs/fpgas/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfpgas"><span class="">FPGAs</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfpgasbitfile-programming-li">
+  <input type="checkbox" id="m-docsfpgasbitfile-programming-check"/>
+  <label for="m-docsfpgasbitfile-programming-check"><a href="/docs/fpgas/bitfile-programming/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsfpgasbitfile-programming"><span class="">Bitfile Programming</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsremote-feature-li">
   <input type="checkbox" id="m-docsremote-feature-check"/>
   <label for="m-docsremote-feature-check"><a href="/docs/remote-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsremote-feature"><span class="">Remote Feature</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfaq-li">
-  <input type="checkbox" id="m-docsfaq-check"/>
-  <label for="m-docsfaq-check"><a href="/docs/faq/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsfaq"><span class="">Frequently Asked Questions</span></a></label>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-featurexplor-labs-li">
+  <input type="checkbox" id="m-docsremote-featurexplor-labs-check"/>
+  <label for="m-docsremote-featurexplor-labs-check"><a href="/docs/remote-feature/xplor-labs/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsremote-featurexplor-labs"><span class="">XploR Labs</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsremote-featureopen-remote-ssh-li">
+  <input type="checkbox" id="m-docsremote-featureopen-remote-ssh-check"/>
+  <label for="m-docsremote-featureopen-remote-ssh-check"><a href="/docs/remote-feature/open-remote-ssh/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsremote-featureopen-remote-ssh"><span class="">Open Remote SSH Connection</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommon-issue-li">
+  <input type="checkbox" id="m-docscommon-issue-check"/>
+  <label for="m-docscommon-issue-check"><a href="/docs/common-issue/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docscommon-issue"><span class="">Common Issues and Solutions</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docshardware-environment-li">
+  <input type="checkbox" id="m-docshardware-environment-check"/>
+  <label for="m-docshardware-environment-check"><a href="/docs/hardware-environment/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docshardware-environment"><span class=""></span></a></label>
   
 </li>
   </ul>
@@ -199,32 +233,7 @@
 </nav>
       </div>
     
-            <div class="taxonomy taxonomy-terms-cloud taxo-tags">
-      <h5 class="taxonomy-title">Tag Cloud</h5>
-      <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bare-metal/" data-taxonomy-term="bare-metal"><span class="taxonomy-label">Bare-Metal</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/bitfile/" data-taxonomy-term="bitfile"><span class="taxonomy-label">Bitfile</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/debug/" data-taxonomy-term="debug"><span class="taxonomy-label">Debug</span><span class="taxonomy-count">4</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/docs/" data-taxonomy-term="docs"><span class="taxonomy-label">Docs</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/electron/" data-taxonomy-term="electron"><span class="taxonomy-label">Electron</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/freertos/" data-taxonomy-term="freertos"><span class="taxonomy-label">Freertos</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/hardware/" data-taxonomy-term="hardware"><span class="taxonomy-label">Hardware</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/installation/" data-taxonomy-term="installation"><span class="taxonomy-label">Installation</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/launch-configuration/" data-taxonomy-term="launch-configuration"><span class="taxonomy-label">Launch Configuration</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/linux/" data-taxonomy-term="linux"><span class="taxonomy-label">Linux</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/qemu/" data-taxonomy-term="qemu"><span class="taxonomy-label">QEMU</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/sample/" data-taxonomy-term="sample"><span class="taxonomy-label">Sample</span><span class="taxonomy-count">3</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/test/" data-taxonomy-term="test"><span class="taxonomy-label">Test</span><span class="taxonomy-count">9</span></a></li>
-        </ul>
-    </div>
-  <div class="taxonomy taxonomy-terms-cloud taxo-categories">
-      <h5 class="taxonomy-title">Categories</h5>
-      <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/examples/" data-taxonomy-term="examples"><span class="taxonomy-label">Examples</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/placeholders/" data-taxonomy-term="placeholders"><span class="taxonomy-label">Placeholders</span><span class="taxonomy-count">6</span></a></li>
-        </ul>
-    </div>
-  
+            
 	
           </aside>
           <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
@@ -238,22 +247,15 @@
   <li class="breadcrumb-item">
     <a href="/docs/getting-started/">Getting started</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    Creating application with FreeRTOS</li>
+    Creating and debugging a FreeRTOS application</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Creating application with FreeRTOS</h1>
+	<h1>Creating and debugging a FreeRTOS application</h1>
 	<div class="lead">This chapter covers the basics of a quick-start project including creating, building, running, and debugging applications.</div>
 	<header class="article-meta">
-		<div class="taxonomy taxonomy-terms-article taxo-tags">
-  <h5 class="taxonomy-title">Tags:</h5>
-  <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="http://localhost:1313/tags/freertos/" data-taxonomy-term="freertos"><span class="taxonomy-label">Freertos</span></a></li>
-    <li><a class="taxonomy-term" href="http://localhost:1313/tags/qemu/" data-taxonomy-term="qemu"><span class="taxonomy-label">QEMU</span></a></li>
-    </ul>
-</div>
-
+		
   </header>
 	<p>This project referred to in this chapter is called Blinky. This application prints Blink text. Through the debug session, users can examine RTOS objects such as Task and Queue. The application can also be built and run on QEMU emulator.</p>
 <p>To build, run and debug Blinky applications with QEMU emulator, please install the <strong>freertos-virt-qemu-blinky-example</strong> components first.</p>
@@ -261,11 +263,11 @@
 <p>Click the <strong>Install Dependencies</strong> button, select <strong>freertos-virt-qemu-blinky-example</strong> template and click the <strong>Install</strong> button.</p>
 <p><img src="/images/getting-started/create-project-0.2.png" alt=""></p>
 <p>Once install template and its dependencies, the dialog will be disappear. Now you can create a new project from this template.</p>
-<p>Please refer to <a href="/docs/project-n-build/5.1_managing_projects/"><strong>Managing Projects</strong></a> for more information.</p>
+<p>Please refer to <a href="/docs/project-n-build/managing_projects/"><strong>Managing Projects</strong></a> for more information.</p>
 <h2 id="create-a-new-project">Create a new project<a class="td-heading-self-link" href="#create-a-new-project" aria-label="Heading self-link"></a></h2>
 <p>Begin by clicking the Create Project button in Xplorer.</p>
 <p><img src="/images/getting-started/create-project-1.png" alt=""></p>
-<p>In Create Project dialog, select the <strong>freertos-virt-qemu-blinky-example</strong> template.</p>
+<p>In <strong>Create a new project</strong> dialog, select the <strong>freertos-virt-qemu-blinky-example</strong> template.</p>
 <p><img src="/images/getting-started/create-project-2.png" alt=""></p>
 <p>Press <strong>Create</strong> to generate the example project.</p>
 <p><img src="/images/getting-started/create-project-3.png" alt=""></p>
@@ -318,10 +320,10 @@
 <button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
 <button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
 <p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+  Glad to hear it! Please <a href="https://github.com/xplor-ide/xplor-ide.github.io/issues/new">tell us how we can improve</a>.
 </p>
 <p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+  Sorry to hear that. Please <a href="https://github.com/xplor-ide/xplor-ide.github.io/issues/new">tell us how we can improve</a>.
 </p>
 </div>
 <script>
