@@ -21,13 +21,13 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
     <meta property="article:published_time" content="2024-09-26T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-01-25T22:54:36+07:00">
+    <meta property="article:modified_time" content="2025-03-06T11:33:28+00:00">
 
   <meta itemprop="name" content="Managing Projects">
   <meta itemprop="description" content="This section provides an overview of workspaces and projects.">
   <meta itemprop="datePublished" content="2024-09-26T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-01-25T22:54:36+07:00">
-  <meta itemprop="wordCount" content="1973">
+  <meta itemprop="dateModified" content="2025-03-06T11:33:28+00:00">
+  <meta itemprop="wordCount" content="2138">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Managing Projects">
   <meta name="twitter:description" content="This section provides an overview of workspaces and projects.">
@@ -204,6 +204,17 @@
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstrace-feature-li">
+  <input type="checkbox" id="m-docstrace-feature-check"/>
+  <label for="m-docstrace-feature-check"><a href="/docs/trace-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstrace-feature"><span class="">Trace Feature</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstrace-featuretrace-feature-li">
+  <input type="checkbox" id="m-docstrace-featuretrace-feature-check"/>
+  <label for="m-docstrace-featuretrace-feature-check"><a href="/docs/trace-feature/trace-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstrace-featuretrace-feature"><span class="">Baremetal Trace View</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommon-issue-li">
   <input type="checkbox" id="m-docscommon-issue-check"/>
   <label for="m-docscommon-issue-check"><a href="/docs/common-issue/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docscommon-issue"><span class="">Common Issues and Solutions</span></a></label>
@@ -237,7 +248,7 @@
     </li>
     <li><a href="#working-with-projects">Working with Projects</a>
       <ul>
-        <li><a href="#install-a-project-template">Install a Project Template</a></li>
+        <li><a href="#install-a-template">Installing Packages and Project Templates</a></li>
         <li><a href="#create-a-new-project">Create a New Project</a></li>
         <li><a href="#import-projects">Import Projects</a></li>
         <li><a href="#rename-projects">Rename Projects</a></li>
@@ -412,7 +423,7 @@ The information includes:</p>
 <p><img src="/images/project-n-build/5.1/5.1.1/08_Project_Management_Box.png" alt="Project Management Box"></p>
 <ul>
 <li><strong>Create Project</strong>: Create a project with installed templates on the local machine.</li>
-<li><strong>Install Dependencies</strong>: Find and install any published templates.</li>
+<li><strong>Install Templates</strong>: Find and install any published templates.</li>
 <li><strong>Build</strong>: Build active project by chosen profiles.</li>
 <li><strong>Debug</strong>: Start debug by choosing a debug session option.</li>
 </ul>
@@ -420,55 +431,109 @@ The information includes:</p>
 and instructions for configuring the build profile are presented in <a href="/docs/building_projects/">Building Projects</a>.</p>
 <h2 id="working-with-projects">Working with Projects<a class="td-heading-self-link" href="#working-with-projects" aria-label="Heading self-link"></a></h2>
 <p>A project template is a project prototype, encompassing source code, build and launch configurations, and dependencies on external tools (such as toolchains, OpenOCD, etc.). It ensures that the application can be successfully built and debugged, providing a ready-to-use foundation for development. This section covers the working flow with projects as installing a template, creating a new project, importing, renaming, or deleting the projects.</p>
-<h3 id="install-a-project-template">Install a Project Template<a class="td-heading-self-link" href="#install-a-project-template" aria-label="Heading self-link"></a></h3>
-<p>You can find all published templates by clicking the <strong>Install Dependencies</strong> button.</p>
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.1/01_install-button.png" alt="Install Button"></p>
-<p>This dialog shows the necessary information about each project template:</p>
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.1/02_dependencies-install-dialog.png" alt="Install Dialog"></p>
+<h3 id="install-a-template">Installing Packages and Project Templates<a class="td-heading-self-link" href="#install-a-template" aria-label="Heading self-link"></a></h3>
+<p>The <strong>Package Manager</strong> allows users to browse, search, and install project templates in the <strong>XploR Eos IDE</strong>. This guide explains how to access the <strong>Package Manager</strong> and install a package or project template.</p>
+<h5 id="accessing-the-package-manager"><strong>Accessing the Package Manager</strong><a class="td-heading-self-link" href="#accessing-the-package-manager" aria-label="Heading self-link"></a></h5>
+<p>To install a package or project template, follow these steps:</p>
+<ol>
+<li>Open <strong>XploR Eos IDE</strong>.</li>
+<li>Click on the <strong>Install Templates</strong> button in the <strong>Xplorer</strong> section.</li>
+<li>The <strong>Package Manager</strong> dialog will appear, displaying a list of available packages.</li>
+</ol>
+<p><img src="/images/project-n-build/1.png" alt="Install Button"></p>
+<p>Alternatively, you can also open the dialog by clicking on the <strong>View</strong> menu and selecting <strong>Package Manager</strong>.</p>
+<h5 id="package-manager-interface-overview"><strong>Package Manager interface overview</strong><a class="td-heading-self-link" href="#package-manager-interface-overview" aria-label="Heading self-link"></a></h5>
+<p>Once inside the <strong>Package Manager</strong>, you will see the following elements:</p>
 <ul>
-<li>
-<p>Name: Template&rsquo;s name.</p>
+<li><strong>Search Bar</strong>: Allow users to search for specific packages by name or description.</li>
+<li><strong>Filter Dropdown</strong>: Allow filtering installed packages based on categories.</li>
+<li><strong>Package List</strong>: Display available packages with the following columns:
+<ul>
+<li><strong>Name</strong>: The package’s unique identifier.</li>
+<li><strong>Author</strong>: The organization or individual supplying the package.</li>
+<li><strong>Description</strong>: A short summary of the package’s purpose</li>
+<li><strong>Version</strong>: The package’s version number.</li>
+</ul>
 </li>
-<li>
-<p>Description: Some basic descriptions about the purpose of the template (Hello World), project type (Baremetal, FreeRTOS,&hellip; ), target type (QEMU or FPGA).</p>
-</li>
-<li>
-<p>Author: a vendor that provides the template for us.</p>
-</li>
-<li>
-<p>Installed: The template is installed on the local machine or not.</p>
-</li>
-<li>
-<p>Latest: The latest version of the template in the registry server.</p>
+<li><strong>Selection Checkbox</strong>: User can select one or multiple packages for installation.</li>
+<li><strong>Action Buttons</strong>:
+<ul>
+<li><strong>Install</strong>: Install the selected packages.</li>
+<li><strong>Close</strong>: Close the Package Manager dialog.</li>
+<li><strong>Installed Packages</strong>: Open the <strong>Installed Packages</strong> dialog to manage already installed packages.</li>
+</ul>
 </li>
 </ul>
-<p>After opening the installation dialog, you can choose your template currently or use a filter to find the template you need.</p>
-<p>We have some options to filter published templates, first is the pulldown filter option:</p>
+<p><img src="/images/project-n-build/2.png" alt=""></p>
+<h5 id="installing-a-package-or-project-template"><strong>Installing a package or project template</strong><a class="td-heading-self-link" href="#installing-a-package-or-project-template" aria-label="Heading self-link"></a></h5>
 <ul>
-<li>Language: Language is used in the template (C, C++).</li>
-</ul>
-<!-- ![Filter_With_language](/images/project-n-build/5.1/5.1.2/5.1.2.1/03_filter_with_language.png) -->
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.1/03_filter_with_language_after.png" alt="Filter_With_language"></p>
+<li>
+<p><strong>Step 1: Search or browse for a package</strong></p>
 <ul>
-<li>Type: Template project type (Baremetal, FreeRTOS,&hellip;).</li>
+<li>Use the search bar to filter packages by keyword.</li>
+<li>Browse the list to find the desired package.</li>
 </ul>
-<!-- ![Filter_With_target](/images/project-n-build/5.1/5.1.2/5.1.2.1/05_filter_with_type.png) -->
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.1/05_filter_with_type_after.png" alt="Filter_With_target"></p>
+</li>
+<li>
+<p><strong>Step 2: Select the package</strong></p>
 <ul>
-<li>Target: The target of the template project can run or debug application (QEMU, FPGA, &hellip;).</li>
+<li>Check the box next to the package name to mark it for installation.</li>
+<li>Optionally, select a specific version from the dropdown menu.</li>
 </ul>
-<!-- ![Filter_With_type](/images/project-n-build/5.1/5.1.2/5.1.2.1/04_filter_with_target.png) -->
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.1/04_filter_with_target_after.png" alt="Filter_With_type"></p>
-<p>Additionally, our IDE supports searching using optional keywords provided by the user. Users can input one or more keywords in the <strong>Other Option</strong> box, separating each keyword with a comma. This feature is case-insensitive, meaning users can enter keywords in uppercase, lowercase, or a mix of both, and the IDE will return all templates that match the provided keywords.</p>
-<p>The keywords can match parts of the template&rsquo;s name, author, or description, for example: corevmcu, LLVM, SoC.One, etc&hellip; As a result, the more keywords you provide, the more precise the search results will be.</p>
-<p>Once you’ve selected the desired filter options and entered the keywords, simply press <strong>Enter</strong> or click the <strong>Apply Filter</strong> button to filter and display the relevant templates.</p>
-<p>Check in the box of one or more templates and click the button <strong>Install</strong> for installation.</p>
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.1/07_Check_template.png" alt="Check_template"></p>
-<!-- ![Install_template](/images/project-n-build/5.1/5.1.2/5.1.2.1/08_Install_template.png) -->
-<p>After installing the template completely, you can find it in the <strong>Create a new project</strong> Dialog.</p>
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.1/09_Open_create_project.png" alt="Open_create_project"></p>
-<p>If you want to clear all conditions, click the <strong>Reset Filter</strong> button and start searching the template from begin.</p>
-<!-- ![Before_clear](/images/project-n-build/5.1/5.1.2/5.1.2.1/10_Before_clear.png) -->
+</li>
+<li>
+<p><strong>Step 3: Confirm installation</strong></p>
+<p>A confirmation dialog will appear, displaying:</p>
+<ul>
+<li>Packages that are already installed.</li>
+<li>Packages that will be newly installed.</li>
+<li>Checkbox for reinstallation.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/project-n-build/4.png" alt=""></p>
+<ul>
+<li><strong>Step 4: Install the package</strong>
+<ul>
+<li>Click the <strong>Install</strong> button to begin the installation process.</li>
+<li>A progress indicator may appear, showing the status of the installation.</li>
+<li>Once completed, a success message will appear in the bottom-right corner, confirming the installation.
+<img src="/images/project-n-build/4.1.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h5 id="managing-installed-packages"><strong>Managing Installed Packages</strong><a class="td-heading-self-link" href="#managing-installed-packages" aria-label="Heading self-link"></a></h5>
+<p>To view and manage installed packages, click the <strong>Installed Packages</strong> button in the <strong>Package Manager</strong>. This will open the <strong>Installed Packages</strong> dialog, which provides an overview of all currently installed packages.</p>
+<p><strong>Installed Packages</strong> interface overview:</p>
+<ul>
+<li><strong>Search Bar</strong>: Helps users quickly find installed packages.</li>
+<li><strong>Filter Dropdown</strong>: Allows filtering installed packages based on categories.</li>
+<li><strong>Installed Template List</strong>: Displays installed packages.</li>
+<li><strong>Action Buttons</strong>:
+<ul>
+<li><strong>Uninstall</strong>: Removes the selected packages.</li>
+<li><strong>Close</strong>: Closes the Installed Packages dialog.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/project-n-build/3.png" alt="Install Dialog"></p>
+<h5 id="how-to-uninstall-a-package"><strong>How to uninstall a package</strong><a class="td-heading-self-link" href="#how-to-uninstall-a-package" aria-label="Heading self-link"></a></h5>
+<ul>
+<li>Open the Package Manager and click Installed Packages.</li>
+<li>Use the <strong>Search Bar</strong> or <strong>Filter Dropdown</strong> to locate a specific package.</li>
+<li>Select the checkbox next to the package(s) you want to uninstall.</li>
+<li>Click the <strong>Uninstall</strong> button to remove the selected package(s).</li>
+<li>Confirm the action if prompted.</li>
+</ul>
+
+
+<div class="alert alert-warning" role="alert">
+<h4 class="alert-heading">Warning</h4>
+
+    The <strong>Package Manager</strong> allows users to install various packages, including project templates and system dependencies. However, uninstalling certain packages—especially non-template ones—may disrupt system functionality or cause errors. Proceed with caution when removing installed packages.
+
+</div>
+
 <h3 id="create-a-new-project">Create a New Project<a class="td-heading-self-link" href="#create-a-new-project" aria-label="Heading self-link"></a></h3>
 <p>Xplor Eos IDE support to create projects from installed templates in UI. Firstly, click button <strong>Create Project</strong> to open the <strong>Create a new project</strong> dialog.</p>
 <p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.2/01_Create_Project_Button.png" alt="Create Project Button"></p>
@@ -486,14 +551,14 @@ and instructions for configuring the build profile are presented in <a href="/do
 <li>has the same name as an existing folder in the location where you save the project.</li>
 </ul>
 <p>After opening the <strong>Create a new project</strong> dialog, you can create a project by choosing the template that is installed:</p>
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.2/03_Choose_template_after.png" alt="Choose template after"></p>
+<p><img src="/images/project-n-build/5.png" alt="Choose template after"></p>
 <p>Choose the location to save the project:</p>
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.2/07_Warning_remove.png" alt="Warning remove"></p>
-<p>When a new project is created successfully, it will be added to the recent workspace and you can see it in the <strong>File Navigator</strong> and <strong>Project Management section</strong>.</p>
+<p><img src="/images/project-n-build/6.png" alt=""></p>
+<p>When a new project is created successfully, it will be added to the recent workspace and you can see it in the <strong>File Navigator</strong> and <strong>Project Management</strong> section.</p>
 <p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.2/08_Create_successfully.png" alt="Create successfully"></p>
-<p>In case your local machine does not have the template you want, click the <strong>Install New Template</strong> button to open the <strong>Install Dependencies Dialog</strong>.</p>
+<p>In case your local machine does not have the template you want, click the <strong>Install New Template</strong> button to open the <strong>Package Manager</strong> dialog.</p>
 <p>Instructions for setting templates, please see section <a href="/docs/project-n-build/managing_projects/#install-a-template">Install a Template</a>.</p>
-<p><img src="/images/project-n-build/5.1/5.1.2/5.1.2.2/09_Install_Dialog_button_from_Create_Project_Dialog.png" alt="Install Dialog button from Create Project Dialog"></p>
+<p><img src="/images/project-n-build/7.png" alt="Choose template after"></p>
 <h3 id="import-projects">Import Projects<a class="td-heading-self-link" href="#import-projects" aria-label="Heading self-link"></a></h3>
 <p><strong>XploR Eos IDE</strong> uses workspace to manage projects, it allows importing any folders present on the local machine, managing them as projects within the workspace they are imported into.</p>
 <p>First of all, click the <strong>More Actions&hellip;</strong> button in the <strong>File Navigator</strong> and click <strong>Add Folder to Workspace&hellip;</strong>.</p>

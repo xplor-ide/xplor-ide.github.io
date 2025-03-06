@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trace Feature on XploR Eos IDE</title>
+    <link>http://localhost:1313/docs/trace-feature/</link>
+    <description>Recent content in Trace Feature on XploR Eos IDE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/docs/trace-feature/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Baremetal Trace View</title>
+      <link>http://localhost:1313/docs/trace-feature/trace-feature/</link>
+      <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/trace-feature/trace-feature/</guid>
+      <description>&lt;h2 id=&#34;baremetal-trace-view&#34;&gt;Baremetal Trace View&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#baremetal-trace-view&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Baremetal Trace View&lt;/strong&gt; allows developers to analyze execution traces efficiently and correlate them with source code.&lt;/p&gt;&#xA;&lt;p&gt;To access &lt;strong&gt;Baremetal Trace View&lt;/strong&gt;, click &lt;strong&gt;View &amp;gt; Baremetal Trace&lt;/strong&gt;, the widget will show in the panel. The &lt;strong&gt;Baremetal Trace View&lt;/strong&gt; widget&#xA;have two main parts:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Toolbar&lt;/strong&gt; (Top):&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Drop-down&lt;/strong&gt;: Contains all available data that can be shown&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Import button&lt;/strong&gt;: Shows a dialog to specify trace data file and related tools&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Refresh button&lt;/strong&gt;: Decodes and refreshes GUI&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Viewer&lt;/strong&gt; (Bottom): Shows information of instructions and corresponding C code. Allows opening the source file of instruction/C code&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

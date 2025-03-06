@@ -20,12 +20,12 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
-    <meta property="article:modified_time" content="2025-01-25T22:54:36+07:00">
+    <meta property="article:modified_time" content="2025-03-06T11:33:28+00:00">
 
   <meta itemprop="name" content="FreeRTOS QEMU">
   <meta itemprop="description" content="FreeRTOS project with QEMU">
-  <meta itemprop="dateModified" content="2025-01-25T22:54:36+07:00">
-  <meta itemprop="wordCount" content="178">
+  <meta itemprop="dateModified" content="2025-03-06T11:33:28+00:00">
+  <meta itemprop="wordCount" content="228">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="FreeRTOS QEMU">
   <meta name="twitter:description" content="FreeRTOS project with QEMU">
@@ -202,6 +202,17 @@
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstrace-feature-li">
+  <input type="checkbox" id="m-docstrace-feature-check"/>
+  <label for="m-docstrace-feature-check"><a href="/docs/trace-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstrace-feature"><span class="">Trace Feature</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstrace-featuretrace-feature-li">
+  <input type="checkbox" id="m-docstrace-featuretrace-feature-check"/>
+  <label for="m-docstrace-featuretrace-feature-check"><a href="/docs/trace-feature/trace-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstrace-featuretrace-feature"><span class="">Baremetal Trace View</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommon-issue-li">
   <input type="checkbox" id="m-docscommon-issue-check"/>
   <label for="m-docscommon-issue-check"><a href="/docs/common-issue/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docscommon-issue"><span class="">Common Issues and Solutions</span></a></label>
@@ -268,28 +279,42 @@
 </ul>
 <h2 id="working-flow">Working flow<a class="td-heading-self-link" href="#working-flow" aria-label="Heading self-link"></a></h2>
 <ol>
-<li>Click the <strong>Install dependencies</strong> button, choose <strong>FreeRTOS</strong> in the <strong>Type</strong> field and click the <strong>Apply filter</strong> button.</li>
+<li>Open the <strong>Package Manager</strong>
+<ul>
+<li>Open the XploR Eos IDE.</li>
+<li>Click on the <strong>Install Templates</strong> button in the Xplorer section.</li>
+<li>The <strong>Package Manager</strong> window will appear.</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/examples/freeRTOS/QEMU/qemu-01.png" alt="freeRTOS create project"></p>
-<p><img src="/images/examples/freeRTOS/QEMU/qemu-02.png" alt="freeRTOS create project"></p>
-<p>Finally, check the <strong>freertos-virt-qemu-timer-example</strong>, and click the button <strong>Install</strong>.</p>
-<p><img src="/images/examples/freeRTOS/QEMU/qemu-03.png" alt="freeRTOS create project"></p>
+<p><img src="/images/examples/freeRTOS/QEMU/1.png" alt="freeRTOS create project"></p>
 <ol start="2">
+<li>Use the Search Bar</li>
+</ol>
+<ul>
+<li>Click on the Search bar at the top of the Package Manager.</li>
+<li>Type &ldquo;freertos&rdquo; and &ldquo;qemu&rdquo; (without quotes).</li>
+<li>The Package Manager will automatically filter and display templates that contain both &ldquo;FreeRTOS&rdquo; and &ldquo;QEMU&rdquo; in their name or description.</li>
+</ul>
+<p><img src="/images/examples/freeRTOS/QEMU/2.png" alt="freeRTOS create project"></p>
+<p>Finally, select the <strong>freertos-virt-qemu-timer-example</strong>, and click the button <strong>Install</strong>.</p>
+<p><img src="/images/examples/freeRTOS/QEMU/3.png" alt="freeRTOS create project"></p>
+<ol>
 <li>To create a new project, select the <strong>Create Project</strong> button to open the <strong>Create a new project</strong> dialog choose <strong>freertos-virt-qemu-timer-example</strong></li>
 </ol>
-<p><img src="/images/examples/freeRTOS/QEMU/qemu-04.png" alt="freeRTOS create project"></p>
+<p><img src="/images/examples/freeRTOS/QEMU/4.png" alt="freeRTOS create project"></p>
 <ol start="3">
-<li>Build this project by choosing a build option in the <strong>Build</strong> pulldown menu on the <strong>Project Management section</strong> and click button <strong>Build</strong>.</li>
+<li>Build this project by choosing a build option in the <strong>Build</strong> pulldown menu on the <strong>Project Management</strong> section and click button <strong>Build</strong>.</li>
 </ol>
 <p><img src="/images/examples/freeRTOS/QEMU/qemu-05.png" alt="freeRTOS build"></p>
 <ol start="4">
-<li>To debug this project, choose a debug configuration in the <strong>Debug</strong> pulldown menu on the <strong>Project Management section</strong></li>
+<li>To debug this project, choose a debug configuration in the <strong>Debug</strong> pulldown menu on the <strong>Project Management</strong> section.</li>
 </ol>
 <p><img src="/images/examples/freeRTOS/QEMU/qemu-06.png" alt="freeRTOS debug"></p>
 <ol start="5">
 <li>After starting debugging, the <strong>XploR RTOS view</strong> will be shown in the panel.
 This view provides a pulldown menu, allowing users to check related information and the information will be updated during
-the debug session, including::</li>
+the debug session, including:</li>
 </ol>
 <ul>
 <li>

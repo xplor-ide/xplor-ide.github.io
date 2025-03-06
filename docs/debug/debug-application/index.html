@@ -23,14 +23,14 @@ When you will switch from the Xplorer to the Debug view in the Side Bar, display
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
     <meta property="article:published_time" content="2024-10-15T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-01-26T01:35:08+07:00">
+    <meta property="article:modified_time" content="2025-03-06T11:24:15+00:00">
 
   <meta itemprop="name" content="Debugging the Application">
   <meta itemprop="description" content="XploR Eos IDE provides an integrated Debug View, where users can start, stop, and control the debugging process, view variables, and monitor the call stack. Additionally, multiple data views give a comprehensive overview by revealing the status of different subsystems of the target. This section outlines some of these views and features.
 When you will switch from the Xplorer to the Debug view in the Side Bar, displaying the default arrangement of views as shown below. The Call Stack provides information on the current program. In the source code view, the program is usually displayed as halted at the beginning of the main() function (though this may vary depending on the loaded program). Below the Threads, Call Stack, Variables, Watch, Breakpoints are also available.">
   <meta itemprop="datePublished" content="2024-10-15T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-01-26T01:35:08+07:00">
-  <meta itemprop="wordCount" content="1929">
+  <meta itemprop="dateModified" content="2025-03-06T11:24:15+00:00">
+  <meta itemprop="wordCount" content="2187">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Debugging the Application">
   <meta name="twitter:description" content="XploR Eos IDE provides an integrated Debug View, where users can start, stop, and control the debugging process, view variables, and monitor the call stack. Additionally, multiple data views give a comprehensive overview by revealing the status of different subsystems of the target. This section outlines some of these views and features.
@@ -208,6 +208,17 @@ When you will switch from the Xplorer to the Debug view in the Side Bar, display
   
 </li>
   </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docstrace-feature-li">
+  <input type="checkbox" id="m-docstrace-feature-check"/>
+  <label for="m-docstrace-feature-check"><a href="/docs/trace-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docstrace-feature"><span class="">Trace Feature</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstrace-featuretrace-feature-li">
+  <input type="checkbox" id="m-docstrace-featuretrace-feature-check"/>
+  <label for="m-docstrace-featuretrace-feature-check"><a href="/docs/trace-feature/trace-feature/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docstrace-featuretrace-feature"><span class="">Baremetal Trace View</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscommon-issue-li">
   <input type="checkbox" id="m-docscommon-issue-check"/>
   <label for="m-docscommon-issue-check"><a href="/docs/common-issue/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docscommon-issue"><span class="">Common Issues and Solutions</span></a></label>
@@ -241,10 +252,18 @@ When you will switch from the Xplorer to the Debug view in the Side Bar, display
         <li><a href="#register-view">Register View</a></li>
       </ul>
     </li>
-    <li><a href="#peripheral-view">Peripheral View</a></li>
+    <li><a href="#peripheral-view">Peripheral view</a></li>
     <li><a href="#disassembly-view">Disassembly View</a></li>
     <li><a href="#memory-inspector">Memory Inspector</a></li>
-    <li><a href="#rtos-view">RTOS View</a></li>
+    <li><a href="#rtos-view">RTOS View</a>
+      <ul>
+        <li><a href="#task">Task</a></li>
+        <li><a href="#heap">Heap</a></li>
+        <li><a href="#queue">Queue</a></li>
+        <li><a href="#semaphore">Semaphore</a></li>
+        <li><a href="#timer">Timer</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
       </div>
@@ -342,13 +361,13 @@ When you will switch from the Xplorer to the Debug view in the Side Bar, display
 </ul>
 <p><img src="/images/debug/debug-9.png" alt=""></p>
 <p>The Register View updates in real-time as the program executes, allowing developers to monitor changes in register values at each breakpoint or step.</p>
-<h2 id="peripheral-view">Peripheral View<a class="td-heading-self-link" href="#peripheral-view" aria-label="Heading self-link"></a></h2>
 <p>The Peripheral View provides developers with a detailed, real-time view of the hardware peripherals in embedded systems. This feature is particularly useful when debugging and analyzing how the firmware interacts with the hardware.</p>
+<h2 id="peripheral-view">Peripheral view<a class="td-heading-self-link" href="#peripheral-view" aria-label="Heading self-link"></a></h2>
 <p>To ensure proper operation of the Peripheral View, include the following attributes in your <code>launch.json</code>:</p>
 <ul>
-<li><strong>svdFilePath</strong>: Path to the SVD file describing the peripherals. We provide a template <code>stm32-blinky-example</code> streamlines the process of debugging STM32F103C8T6 Blue Pill ARM Cortex-M3 peripherals.</li>
+<li><strong>svdPath</strong>: Path to the SVD file describing the peripherals. We provide a template <code>stm32-blinky-example</code> that streamlines the process of debugging STM32F103C8T6 Blue Pill ARM Cortex-M3 peripherals.</li>
 </ul>
-<p>Here&rsquo;s an example configuration for debugging STM32 projects using <code>xplor-debug</code> and Peripheral View. This configuration assumes you&rsquo;re using OpenOCD as the GDB server and have the appropriate SVD file for your device.
+<p>Here&rsquo;s an example configuration for debugging STM32 projects using <code>xplor-debug</code> and Peripheral View. This configuration assumes you&rsquo;re using OpenOCD as the GDB server and have the appropriate SVD file for your device.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-json" data-lang="json"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#008000;font-weight:bold">&#34;version&#34;</span>: <span style="color:#b44">&#34;0.2.0&#34;</span>,
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#008000;font-weight:bold">&#34;configurations&#34;</span>: [
@@ -376,13 +395,24 @@ When you will switch from the Xplorer to the Debug view in the Side Bar, display
 </span></span><span style="display:flex; background-color:#dfdfdf"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>        <span style="color:#008000;font-weight:bold">&#34;svdFilePath&#34;</span>: <span style="color:#b44">&#34;${workspaceFolder}/STM32F103.svd&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>      }
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>    ]
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>}</span></span></code></pre></div></p>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>}</span></span></code></pre></div>
 <p><strong>How to Use the Peripheral View</strong></p>
-<p>You can access the <strong>Peripheral View</strong> by navigating to <strong>View &gt; Peripheral View</strong>. This view located on the panel, provides a comprehensive overview of the peripheral devices associated with the target system.</p>
-<p>Click on a peripheral to expand its details and see its registers. Common peripherals inlcude timers, UARTs, GPIO ports, ADCs, and more. The view often presents a hierarchical tree structure showing the peripherals available on the microcontroller. The current values of the registers are displayed, allowing you to view the data in different formats (decimal, hexadecimal, binary).</p>
-<p><img src="/images/debug/debug-10.png" alt=""></p>
-<p>When using the <strong>Peripheral View</strong>, you may notice that the values of some peripheral registers are hightlighted in yellow. This indicates that these values have recently changed, providing a quick visual cue to help you identify and track updates in the hardware&rsquo;s status or configuration.</p>
-<p><img src="/images/debug/debug-11.png" alt=""></p>
+<p>You can access the <strong>Peripheral View</strong> by navigating to <strong>View &gt; Peripheral</strong>. This view located on the panel, provides a comprehensive overview of the peripheral devices associated with the target system.</p>
+<p><img src="/images/debug/debug-25.png" alt=""></p>
+<p>Click on a peripheral to expand its details and see its registers. Common peripherals include timers, UARTs, GPIO ports, ADCs, and more. The view often presents a hierarchical tree structure showing the peripherals available on the microcontroller.</p>
+<p><img src="/images/debug/debug-26.png" alt=""></p>
+<p>The current values of the registers are displayed, allowing you to copy the data in different formats (decimal, hexadecimal, binary, or expressions) by right-clicking and choosing the format you need.</p>
+<p><img src="/images/debug/debug-27.png" alt=""></p>
+<p><strong>Peripheral View</strong> also allows directly converting the value format by selecting the widget&rsquo;s right-corner pulldown.</p>
+<p><img src="/images/debug/debug-28.png" alt=""></p>
+<p><strong>Peripheral View</strong> also allows you to modify the value of the data. By double-clicking the field, the edit dialog is shown and allows you to change the value of it.</p>
+<p><img src="/images/debug/debug-29.gif" alt=""></p>
+<p><strong>Peripheral View</strong> can help you track data more deeply by supporting the opening of an address in the <strong>Memory Inspector</strong> after clicking it.</p>
+<p><img src="/images/debug/debug-30.png" alt=""></p>
+<p>When using the <strong>Peripheral View</strong>, you may notice that the values of some peripheral registers are highlighted. This indicates that these values have recently changed, providing a quick visual cue to help you identify and track updates in the hardware&rsquo;s status or configuration.</p>
+<p><img src="/images/debug/debug-31.png" alt=""></p>
+<p><strong>Peripheral View</strong> supports pinning a peripheral register to the top of the widget.</p>
+<p><img src="/images/debug/debug-32.png" alt=""></p>
 <p><strong>How to use STM32 template</strong></p>
 <ul>
 <li>Install the <code>stm32-blinky-example</code> template</li>
@@ -450,7 +480,7 @@ When you will switch from the Xplorer to the Debug view in the Side Bar, display
 </li>
 <li>
 <p>Disable instruction mode: When instruction mode is disabled, the debugger will step through the C/C++ code, showing the high-level flow of execution, which is useful for analyzing the logic at the source code level.</p>
-<p><img src="/images/debug/debug-21.png" alt=""></p>
+<p><img src="/images/debug/debug-36.png" alt=""></p>
 </li>
 </ul>
 </li>
@@ -461,34 +491,42 @@ When you will switch from the Xplorer to the Debug view in the Side Bar, display
 <p><img src="/images/debug/memory-view.GIF" alt=""></p>
 <p>For more detailed information, please refer to <a href="https://www.eclipse.org/community/eclipse_newsletter/2021/april/3.php">Six Reasons to Check Out the New Eclipse Theia Memory Inspector</a>.</p>
 <h2 id="rtos-view">RTOS View<a class="td-heading-self-link" href="#rtos-view" aria-label="Heading self-link"></a></h2>
-<p>To activate the RTOS View, we provide a pre-configured template <code>freertos-virt-qemu-blinky-example</code> for seamless intergation into your debugging workflow. Please install the template to get more configuration information.</p>
-<p>To open the RTOS View, follow these steps:</p>
+<p>To activate the RTOS View, we provide a pre-configured template <code>freertos-virt-qemu-blinky-example</code> for seamless integration into your debugging workflow. Please install the template to get more configuration information.</p>
+<p>To show the RTOS objects by RTOS View, follow these steps:</p>
 <ul>
-<li>Start debugging with FreeRTOS application</li>
-<li>Once the debugger is running, locate the <strong>RTOS View</strong> in the panel of your IDE.</li>
+<li>Start debugging with the FreeRTOS application</li>
+<li>Once the debugger is running, locate the <strong>RTOS View</strong> in your IDE panel.</li>
 </ul>
-<p>The RTOS View provides critical insights into your RTOS-based application&rsquo;s runtime behavior, allowing you to monitor and debug tasks, queues, semaphores, and other RTOS objects.</p>
-<ul>
-<li>Task monitoring: This view display list of all tasks currently running in the system. Each task is shown with important details, including:
+<p>The RTOS View provides critical insights into your RTOS-based application&rsquo;s runtime behavior and allows you to monitor and inspect tasks, queues, semaphores, and other RTOS objects.</p>
+<h3 id="task">Task<a class="td-heading-self-link" href="#task" aria-label="Heading self-link"></a></h3>
+<p>This view displays a list of all tasks currently running in the system. Each task is shown with important details, including:</p>
 <ul>
 <li>Task name: The identifier for the task</li>
-<li>State: The current status of the task (e.g., running, ready, blocked, suspended)</li>
-<li>Priority: The priority level assigned to the task, influencing its execution order compared to other tasks.</li>
-<li>Stack Usage: Information about the memory consumed by the task&rsquo;s stack, crucial for avoiding stack overflows.
-<img src="/images/debug/debug-16.png" alt=""></li>
+<li>Status: The current status of the task (e.g., running, ready, blocked, suspended)</li>
+<li>Priority: The priority level assigned to the task, influences its execution order compared to other tasks.</li>
+<li>Stack Usage: Information about the memory consumed by the task&rsquo;s stack, is crucial for avoiding stack overflows.</li>
 </ul>
-</li>
-<li>Heap: Displays information about dynamic memory allocation, including total size, used memory, and available space.</li>
-</ul>
+<p><img src="/images/debug/debug-16.png" alt=""></p>
+<p><strong>IDE</strong> allows clicking on variables to add them to the debug watch view. In <strong>Tasks</strong>, the values ​​in the Task Name column, after being clicked, will be displayed on the watch view expression that it refers to.</p>
 <p><img src="/images/debug/debug-17.png" alt=""></p>
-<ul>
-<li>Queue: Shows the status of message queues used for inter-task communication. It indicates the current and maximum length of queues, item sizes, and waiting tasks, facilitating efficient data exchange between tasks.</li>
-</ul>
+<p><strong>IDE</strong> also allows clicking on addresses to track them in the Memory <strong>Inspector</strong>. In the <strong>Tasks</strong> tab, any address value highlighted in blue can be tracked.</p>
 <p><img src="/images/debug/debug-18.png" alt=""></p>
-<ul>
-<li>Semaphore: Displays information about semaphores used for synchronization and resource management. It indicates the current value, type (binary, counting, mutex, or recursive mutex), and waiting tasks, helping to prevent race conditions and ensure safe access to shared resources.</li>
-</ul>
+<h3 id="heap">Heap<a class="td-heading-self-link" href="#heap" aria-label="Heading self-link"></a></h3>
+<p>Displays information about dynamic memory allocation, including total size, used <strong>memory</strong>, and available space. In the <strong>Heap</strong> tab, the start and the end of Heap memory (<strong>Heap Start</strong> and <strong>Heap End</strong>), can be tracked and shown in <strong>Memory Inspector</strong> by clicking on them.</p>
 <p><img src="/images/debug/debug-19.png" alt=""></p>
+<h3 id="queue">Queue<a class="td-heading-self-link" href="#queue" aria-label="Heading self-link"></a></h3>
+<p>Shows the status of message queues used for inter-task communication. It indicates the current and maximum length of queues, item sizes, and waiting tasks, facilitating efficient data exchange between tasks.</p>
+<p><img src="/images/debug/debug-20.png" alt=""></p>
+<h3 id="semaphore">Semaphore<a class="td-heading-self-link" href="#semaphore" aria-label="Heading self-link"></a></h3>
+<p>Displays information about semaphores used for synchronization and resource management. It indicates the Name, type (binary, counting, mutex, or recursive mutex), and waiting tasks, helps to prevent race conditions and ensure safe access to shared resources.</p>
+<p><img src="/images/debug/debug-21.png" alt=""></p>
+<p>In the <strong>Semaphore</strong> tab, the values in the <strong>Name</strong> column can be clicked to show the expression they refer to.</p>
+<p><img src="/images/debug/debug-22.png" alt=""></p>
+<h3 id="timer">Timer<a class="td-heading-self-link" href="#timer" aria-label="Heading self-link"></a></h3>
+<p>This displays information about timers used for scheduling and time-based task execution. It includes details such as the Timer ID, Name, Period, Status, Number, and assigned Callback function.</p>
+<p><img src="/images/debug/debug-23.png" alt=""></p>
+<p>To track the callback function, the <strong>Timer</strong> tab allows you to click the values in the <strong>Callback</strong> column to open the file that defines it.</p>
+<p><img src="/images/debug/debug-24.png" alt=""></p>
 
 	<style>
   .feedback--answer {
